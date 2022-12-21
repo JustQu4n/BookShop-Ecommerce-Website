@@ -1,181 +1,182 @@
-
 <!DOCTYPE html>
+
 <head>
-	<title>Visitors an Admin Panel Category Bootstrap Responsive Website Template | Home :: w3layouts</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<link rel="icon" type="image/x-icon" href="{{asset('assets/images/logoes/logo.png')}}">
-	
-	<meta name="keywords" content="Visitors Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+    <title>Trang quản lý</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/logoes/logo.png') }}">
+
+    <meta name="keywords"
+        content="Visitors Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
 	Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-	<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-	<!-- bootstrap-css -->
-	<link rel="stylesheet" href="{{asset('admin/css/bootstrap.min.css')}}" >
-	<!-- //bootstrap-css -->
-	<!-- Custom CSS -->
-	<link href="{{asset('admin/css/style.css')}}" rel='stylesheet' type='text/css' />
-	<link href="{{asset('admin/css/style-responsive.css')}}" rel="stylesheet"/>
-	<!-- font CSS -->
-	<link href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
-	<!-- font-awesome icons -->
-	<link rel="stylesheet" href="{{asset('admin/css/font.css')}}" type="text/css"/>
-	<link href="{{asset('admin/css/font-awesome.css')}}" rel="stylesheet"> 
-	<link rel="stylesheet" href="{{asset('admin/css/morris.css')}}" type="text/css"/>
-	<!-- calendar -->
-	<link rel="stylesheet" href="{{asset('admin/css/monthly.css')}}">
-	<link rel="stylesheet" href="{{asset('admin/css/alert.css')}}">
-	<link rel="stylesheet" href="{{asset('assets/css/sweetalert.css')}}">
-	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
-	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
- 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
- 	<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
-	
-	<!-- //calendar -->
-	<!-- //font-awesome icons -->
-	<script src="{{asset('admin/js/jquery2.0.3.min.js')}}"></script>
-	<script src="{{asset('admin/js/raphael-min.js')}}"></script>
-	<script src="{{asset('admin/js/morris.js')}}"></script>
-	<script src="{{asset('admin/ckeditor/ckeditor.js')}}"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-	<script src="{{asset('assets/js/sweetalert.js')}}"></script>
-	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-	<script>
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- bootstrap-css -->
+    <link rel="stylesheet" href="{{ asset('admin/css/bootstrap.min.css') }}">
+    <!-- //bootstrap-css -->
+    <!-- Custom CSS -->
+    <link href="{{ asset('admin/css/style.css') }}" rel='stylesheet' type='text/css' />
+    <link href="{{ asset('admin/css/style-responsive.css') }}" rel="stylesheet" />
+    <!-- font CSS -->
+    <link
+        href='//fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic'
+        rel='stylesheet' type='text/css'>
+    <!-- font-awesome icons -->
+    <link rel="stylesheet" href="{{ asset('admin/css/font.css') }}" type="text/css" />
+    <link href="{{ asset('admin/css/font-awesome.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('admin/css/morris.css') }}" type="text/css" />
+    <!-- calendar -->
+    <link rel="stylesheet" href="{{ asset('admin/css/monthly.css') }}">
+    <link rel="stylesheet" href="{{ asset('admin/css/alert.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/sweetalert.css') }}">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+	<link rel="stylesheet" href="{{ asset('admin/css/dash_board.css') }}">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.min.js"></script>
 
-		
-		function feet_delivery() {
-			var _token = $('input[name=_token]').val();
-			$.post(
-				"{{route('delivery.show-delivery')}}", 
-				
-				{
+    <!-- //calendar -->
+    <!-- //font-awesome icons -->
+    <script src="{{ asset('admin/js/jquery2.0.3.min.js') }}"></script>
+    <script src="{{ asset('admin/js/raphael-min.js') }}"></script>
+    <script src="{{ asset('admin/js/morris.js') }}"></script>
+    <script src="{{ asset('admin/ckeditor/ckeditor.js') }}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="{{ asset('assets/js/sweetalert.js') }}"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script>
+        function feet_delivery() {
+            var _token = $('input[name=_token]').val();
+            $.post(
+                "{{ route('delivery.show-delivery') }}",
 
-					_token: _token
-				}, 
-				function(data) {
-					$('.load-delivery').html(data);
-				}
-			);
-		}
-		$(document).ready(function () {
+                {
 
-			feet_delivery();
-			
-			$('#add').click(function () {
-				var city_id  = $('#city').val();
-				var province_id  = $('#province').val();
-				var wards_id = $('#wards').val();
-				var fees_ship = $('.feeship').val();
-				var _token = $('input[name=_token]').val();
-				$.post(
-					"{{route('delivery.save-delivery')}}", 
-					{
-						city_id: city_id,
-						province_id: province_id,
-						wards_id: wards_id,
-						fees_ship: fees_ship,
-						_token: _token
-					}, 
-					function(data) {
-						feet_delivery();
-						alert('Thêm thành công');
-					}
-				);
-			});
-			
-			$('.choose').change(function () {
-				
-				var action = $(this).attr('id'); 
-				var code_id = $(this).val();
-				var _token = $('input[name="_token"]').val();
-				var result = ""
+                    _token: _token
+                },
+                function(data) {
+                    $('.load-delivery').html(data);
+                }
+            );
+        }
+        $(document).ready(function() {
 
-				if(action == "city") {
-					result = 'province';
-				} else {
-					result = 'wards';
-				}
+            feet_delivery();
 
-				$.post(
-					"{{route('delivery.select-delivery')}}", // url 
-					{
-						_token:_token,
-						action: action,
-						code_id: code_id,
+            $('#add').click(function() {
+                var city_id = $('#city').val();
+                var province_id = $('#province').val();
+                var wards_id = $('#wards').val();
+                var fees_ship = $('.feeship').val();
+                var _token = $('input[name=_token]').val();
+                $.post(
+                    "{{ route('delivery.save-delivery') }}", {
+                        city_id: city_id,
+                        province_id: province_id,
+                        wards_id: wards_id,
+                        fees_ship: fees_ship,
+                        _token: _token
+                    },
+                    function(data) {
+                        feet_delivery();
+                        alert('Thêm thành công');
+                    }
+                );
+            });
 
-					}, // data 
-					function(data) {
-						$('#' + result).html(data);
-					}
+            $('.choose').change(function() {
 
-					)
+                var action = $(this).attr('id');
+                var code_id = $(this).val();
+                var _token = $('input[name="_token"]').val();
+                var result = ""
 
-			});	 
+                if (action == "city") {
+                    result = 'province';
+                } else {
+                    result = 'wards';
+                }
 
-			$('.status').change(function () {
-				
-				var value = $(this).val();
-				var order_id = $(this).data('id');
-				
-				var _token = $('input[name=_token]').val(); 
+                $.post(
+                    "{{ route('delivery.select-delivery') }}", // url 
+                    {
+                        _token: _token,
+                        action: action,
+                        code_id: code_id,
 
-				$.post(
-					"{{route('order.change-status')}}", // url 
-					{
-						_token:_token,
-						value: value,
-						order_id: order_id,
+                    }, // data 
+                    function(data) {
+                        $('#' + result).html(data);
+                    }
 
-					}, // data 
-					function(data) {
-						
-						swal("Thành công", "Đơn hàng đã được cập nhật", "success");
-					}
-					)
+                )
 
-				
+            });
 
-			});	
-		});
-		$(document).on('blur', '.edit-feeship', function() {
-		
-			var id = $(this).data('id');
-			var _token = $('input[name=_token]').val();
-			var fees_ship = $(this).text();
-			$.post(
-				"{{route('delivery.edit-delivery')}}", 
-				{
-					_token: _token,
-					id: id,
-					fees_ship: fees_ship,
-				},
-				function(data) {
-				
-					feet_delivery();
-				
-				}
-				)
-		});
-</script>
+            $('.status').change(function() {
+
+                var value = $(this).val();
+                var order_id = $(this).data('id');
+
+                var _token = $('input[name=_token]').val();
+
+                $.post(
+                    "{{ route('order.change-status') }}", // url 
+                    {
+                        _token: _token,
+                        value: value,
+                        order_id: order_id,
+
+                    }, // data 
+                    function(data) {
+
+                        swal("Thành công", "Đơn hàng đã được cập nhật", "success");
+                    }
+                )
+
+
+
+            });
+        });
+        $(document).on('blur', '.edit-feeship', function() {
+
+            var id = $(this).data('id');
+            var _token = $('input[name=_token]').val();
+            var fees_ship = $(this).text();
+            $.post(
+                "{{ route('delivery.edit-delivery') }}", {
+                    _token: _token,
+                    id: id,
+                    fees_ship: fees_ship,
+                },
+                function(data) {
+
+                    feet_delivery();
+
+                }
+            )
+        });
+    </script>
 
 </head>
+
 <body>
-	<section id="container">
-		<!--header start-->
-		<header class="header fixed-top clearfix">
-		<!--logo start-->
-			<div class="brand">
-				<a href="index.html" class="logo">
-					BOOKSHOP
-				</a>
-				<div class="sidebar-toggle-box">
-					<div class="fa fa-bars"></div>
-				</div>
-			</div>
-		<!--logo end-->
-			<div class="nav notify-row" id="top_menu">
-				<!--  notification start -->
-				{{--  <ul class="nav top-menu">
+    <section id="container">
+        <!--header start-->
+        <header class="header fixed-top clearfix">
+            <!--logo start-->
+            <div class="brand">
+                <a href="index.html" class="logo">
+                    BOOKSHOP
+                </a>
+                <div class="sidebar-toggle-box">
+                    <div class="fa fa-bars"></div>
+                </div>
+            </div>
+            <!--logo end-->
+            <div class="nav notify-row" id="top_menu">
+                <!--  notification start -->
+                {{--  <ul class="nav top-menu">
 					<!-- settings start -->
 					<li class="dropdown">
 						<a data-toggle="dropdown" class="dropdown-toggle" href="#">
@@ -349,261 +350,312 @@
 					</li>
 					<!-- notification dropdown end -->
 				</ul>  --}}
-				<!--  notification end -->
-			</div>
-		<div class="top-nav clearfix">
-			<!--search & user info start-->
-			<ul class="nav pull-right top-menu">
-				
-				<li>
-					<input type="text" class="form-control search" placeholder=" Search">
-				</li>
-				
-				<!-- user login dropdown start-->
-				<li class="dropdown">
-					
-					<a data-toggle="dropdown" class="dropdown-toggle" href="#">
-						
-						{{-- <img alt="" src="{{asset('uploads/profile/'.Auth::user()->admin_image)}}"> --}}
-						{{--  <span class="username">{{$admin_name}}</span>  --}}
-						<b class="caret"></b>
-					</a>
-					<ul class="dropdown-menu extended logout">
-						
-						<li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
-						<li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
-						<li><a href="{{URL::to('logout-auth')}}"><i class="fa fa-cog"></i> Đăng xuất</a></li>
-						{{--  <li><a href="{{route('admin.logout')}}"><i class="fa fa-key"></i> Log Out</a></li>  --}}
-					</ul>
-				</li>
-				<!-- user login dropdown end -->
-			
-			</ul>
-			<!--search & user info end-->
-		</div>
-	</header>
-	<!--header end-->
-	<!--sidebar start-->
-	<aside>
-		<div id="sidebar" class="nav-collapse">
-			<!-- sidebar menu start-->
-			<div class="leftside-navigation">
-				<ul class="sidebar-menu" id="nav-accordion">
-					<li>
-						<a class="active" href="{{route('admin')}}">
-							<i class="fa fa-dashboard"></i>
-							<span>Tổng quan</span>
-						</a>
-					</li>
-					
-					<li class="sub-menu">
-						<a href="javascript:;">
-							<i class="fa fa-book"></i>
-							<span>Danh mục sản phẩm</span>
-						</a>
-						<ul class="sub">
-							 <li><a href="{{route('category.add')}}">Thêm danh mục </a></li>  
-							 <li><a href="{{route('category.')}}">Liệt kê danh mục </a></li>  
-						</ul>
-					</li>
+                <!--  notification end -->
+            </div>
+            <div class="top-nav clearfix">
+                <!--search & user info start-->
+                <ul class="nav pull-right top-menu">
 
-					<li class="sub-menu">
-						<a href="javascript:;">
-							<i class="fa fa-book"></i>
-							<span>Thương hiệu sản phẩm</span>
-						</a>
-						<ul class="sub">
-							<li><a href="{{route('brand.add')}}">Thêm thương hiệu </a></li>
-							<li><a href="{{route('brand.')}}">Liệt kê thương hiệu </a></li>
-						</ul>
-					</li>
+                    <li>
+                        <input type="text" class="form-control search" placeholder=" Search">
+                    </li>
 
-					<li class="sub-menu">
-						<a href="javascript:;">
-							<i class="fa fa-book"></i>
-							<span>Sách </span>
-						</a>
-						<ul class="sub">
-							<li><a href="{{route('book.add')}}">Thêm sách mới </a></li>
-							<li><a href="{{route('book.')}}">Tất cả sách  </a></li>
-						</ul>
-					</li>
-					<li class="sub-menu">
-						<a href="javascript:;">
-							<i class="fa fa-book"></i>
-							<span>Sự kiện </span>
-						</a>
-						<ul class="sub">
-							<li><a href="{{route('event.add')}}">Thêm sự kiện mới </a></li>
-							<li><a href="{{route('event.admin')}}">Liệt kê tất cả sự kiện</a></li>
-						</ul>
-					</li>
-					<li class="sub-menu">
-						<a href="javascript:;">
-							<i class="fa fa-book"></i>
-							<span>Blog </span>
-						</a>
-						<ul class="sub">
-							<li><a href="{{route('blog.add')}}">Thêm Blog mới </a></li>
-							<li><a href="{{route('blog.admin')}}">Liệt kê tất cả Blog</a></li>
-						</ul>
-					</li>
-					<li class="sub-menu">
-						<a href="{{route('feedBack.')}}">
-							<i class="fa fa-book"></i>
-							<span>Phản hồi </span>
-						</a>
-						
-					</li>
-					<li class="sub-menu">
-						<a href="javascript:;">
-							<i class="fa fa-book"></i>
-							<span>Mã giảm giá </span>
-						</a>
-						<ul class="sub">
-							<li><a href="{{route('discount.add')}}">Thêm mã giảm giá </a></li>
-							<li><a href="{{route('discount.')}}">Danh sách mã giảm giá  </a></li>
-						</ul>
-					</li>
+                    <!-- user login dropdown start-->
+                    <li class="dropdown">
 
-					<li class="sub-menu">
-						<a href="javascript:;">
-							<i class="fa fa-book"></i>
-							<span>Phí vận chuyển </span>
-						</a>
-						<ul class="sub">
-							<li><a href="{{route('delivery.')}}">Danh sách phí vận chuyển </a></li>
-						</ul>
-					</li>
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
 
-					<li class="sub-menu">
-						<a href="javascript:;">
-							<i class="fa fa-book"></i>
-							<span>Đơn hàng </span>
-						</a>
-						<ul class="sub">
-							<li><a href="{{route('order.')}}">Danh sách đơn hàng </a></li>
-						</ul>
-					</li>
-				</ul>            
-			</div>
-			<!-- sidebar menu end-->
-		</div>
-	</aside>
-	<!--sidebar end-->
-	<!--main content start-->
-	<section id="main-content">
-		<section class="wrapper">
-			
-			@yield('admin_content')
-		</section>
-	</section>
-	<!-- footer -->
-			
-	<!-- / footer -->
-	</section>
-	<!--main content end-->
-	</section>
-	<script src="{{asset('admin/js/bootstrap.js')}}"></script>
-	<script src="{{asset('admin/js/jquery.dcjqaccordion.2.7.js')}}"></script>
-	<script src="{{asset('admin/js/scripts.js')}}"></script>
-	<script src="{{asset('admin/js/jquery.slimscroll.js')}}"></script>
-	<script src="{{asset('admin/js/jquery.nicescroll.js')}}"></script>
-	<!--[if lte IE 8]><script language="javascript" type="text/javascript" src="{{asset('admin/js/flot-chart/excanvas.min.js')}}"></script><![endif]-->
-	<script src="{{asset('admin/js/jquery.scrollTo.js')}}"></script>
-	
+                            {{-- <img alt="" src="{{asset('uploads/profile/'.Auth::user()->admin_image)}}"> --}}
+                            {{--  <span class="username">{{$admin_name}}</span>  --}}
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu extended logout">
 
-	<script>
-			CKEDITOR.replace('editor1');
-			CKEDITOR.replace('editor2');
-	</script>
-	<!-- morris JavaScript -->	
-	<script>
-		$(document).ready(function() {
-			//BOX BUTTON SHOW AND CLOSE
-		jQuery('.small-graph-box').hover(function() {
-			jQuery(this).find('.box-button').fadeIn('fast');
-		}, function() {
-			jQuery(this).find('.box-button').fadeOut('fast');
-		});
-		jQuery('.small-graph-box .box-close').click(function() {
-			jQuery(this).closest('.small-graph-box').fadeOut(200);
-			return false;
-		});
-		
-			//CHARTS
-			function gd(year, day, month) {
-				return new Date(year, month - 1, day).getTime();
-			}
-			
-			graphArea2 = Morris.Area({
-				element: 'hero-area',
-				padding: 10,
-			behaveLikeLine: true,
-			gridEnabled: false,
-			gridLineColor: '#dddddd',
-			axes: true,
-			resize: true,
-			smooth:true,
-			pointSize: 0,
-			lineWidth: 0,
-			fillOpacity:0.85,
-				data: [
-					{period: '2015 Q1', iphone: 2668, ipad: null, itouch: 2649},
-					{period: '2015 Q2', iphone: 15780, ipad: 13799, itouch: 12051},
-					{period: '2015 Q3', iphone: 12920, ipad: 10975, itouch: 9910},
-					{period: '2015 Q4', iphone: 8770, ipad: 6600, itouch: 6695},
-					{period: '2016 Q1', iphone: 10820, ipad: 10924, itouch: 12300},
-					{period: '2016 Q2', iphone: 9680, ipad: 9010, itouch: 7891},
-					{period: '2016 Q3', iphone: 4830, ipad: 3805, itouch: 1598},
-					{period: '2016 Q4', iphone: 15083, ipad: 8977, itouch: 5185},
-					{period: '2017 Q1', iphone: 10697, ipad: 4470, itouch: 2038},
-				
-				],
-				lineColors:['#eb6f6f','#926383','#eb6f6f'],
-				xkey: 'period',
-				redraw: true,
-				ykeys: ['iphone', 'ipad', 'itouch'],
-				labels: ['All Visitors', 'Returning Visitors', 'Unique Visitors'],
-				pointSize: 2,
-				hideHover: 'auto',
-				resize: true
-			});
-			
-		
-		});
-		</script>
-	<!-- calendar -->
-		<script type="text/javascript" src="{{asset('admin/js/monthly.js')}}"></script>
-		<script type="text/javascript">
-			$(window).load( function() {
+                            <li><a href="#"><i class=" fa fa-suitcase"></i>Profile</a></li>
+                            <li><a href="#"><i class="fa fa-cog"></i> Settings</a></li>
+                            <li><a href="{{ URL::to('logout-auth') }}"><i class="fa fa-cog"></i> Đăng xuất</a></li>
+                            {{--  <li><a href="{{route('admin.logout')}}"><i class="fa fa-key"></i> Log Out</a></li>  --}}
+                        </ul>
+                    </li>
+                    <!-- user login dropdown end -->
 
-				$('#mycalendar').monthly({
-					mode: 'event',
-					
-				});
+                </ul>
+                <!--search & user info end-->
+            </div>
+        </header>
+        <!--header end-->
+        <!--sidebar start-->
+        <aside>
+            <div id="sidebar" class="nav-collapse">
+                <!-- sidebar menu start-->
+                <div class="leftside-navigation">
+                    <ul class="sidebar-menu" id="nav-accordion">
+                        <li>
+                            <a class="active" href="{{ route('admin') }}">
+                                <i class="fa fa-dashboard"></i>
+                                <span>Thống kê</span>
+                            </a>
+                        </li>
 
-				$('#mycalendar2').monthly({
-					mode: 'picker',
-					target: '#mytarget',
-					setWidth: '250px',
-					startHidden: true,
-					showTrigger: '#mytarget',
-					stylePast: true,
-					disablePast: true
-				});
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fa fa-book"></i>
+                                <span>Danh mục sản phẩm</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="{{ route('category.add') }}">Thêm danh mục </a></li>
+                                <li><a href="{{ route('category.') }}">Liệt kê danh mục </a></li>
+                            </ul>
+                        </li>
 
-			switch(window.location.protocol) {
-			case 'http:':
-			case 'https:':
-			// running on a server, should be good.
-			break;
-			case 'file:':
-			alert('Just a heads-up, events will not work when run locally.');
-			}
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fa fa-book"></i>
+                                <span>Thương hiệu sản phẩm</span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="{{ route('brand.add') }}">Thêm thương hiệu </a></li>
+                                <li><a href="{{ route('brand.') }}">Liệt kê thương hiệu </a></li>
+                            </ul>
+                        </li>
 
-			});
-		</script>
-		<!-- //calendar -->
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fa fa-book"></i>
+                                <span>Sách </span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="{{ route('book.add') }}">Thêm sách mới </a></li>
+                                <li><a href="{{ route('book.') }}">Tất cả sách </a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fa fa-book"></i>
+                                <span>Sự kiện </span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="{{ route('event.add') }}">Thêm sự kiện mới </a></li>
+                                <li><a href="{{ route('event.admin') }}">Liệt kê tất cả sự kiện</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fa fa-book"></i>
+                                <span>Blog </span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="{{ route('blog.add') }}">Thêm Blog mới </a></li>
+                                <li><a href="{{ route('blog.admin') }}">Liệt kê tất cả Blog</a></li>
+                            </ul>
+                        </li>
+                        <li class="sub-menu">
+                            <a href="{{ route('feedBack.') }}">
+                                <i class="fa fa-book"></i>
+                                <span>Phản hồi </span>
+                            </a>
+
+                        </li>
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fa fa-book"></i>
+                                <span>Mã giảm giá </span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="{{ route('discount.add') }}">Thêm mã giảm giá </a></li>
+                                <li><a href="{{ route('discount.') }}">Danh sách mã giảm giá </a></li>
+                            </ul>
+                        </li>
+
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fa fa-book"></i>
+                                <span>Phí vận chuyển </span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="{{ route('delivery.') }}">Danh sách phí vận chuyển </a></li>
+                            </ul>
+                        </li>
+
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fa fa-book"></i>
+                                <span>Đơn hàng </span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="{{ route('order.') }}">Danh sách đơn hàng </a></li>
+                            </ul>
+                        </li>
+						<li class="sub-menu">
+                            <a href="{{ route('list_user') }}">
+                                <i class="fa fa-book"></i>
+                                <span>Danh sách khoản khách hàng </span>
+                            </a>	
+                        </li>
+                    </ul>
+                </div>
+                <!-- sidebar menu end-->
+            </div>
+        </aside>
+        <!--sidebar end-->
+        <!--main content start-->
+        <section id="main-content">
+            <section class="wrapper">
+
+                @yield('admin_content')
+            </section>
+        </section>
+        <!-- footer -->
+
+        <!-- / footer -->
+    </section>
+    <!--main content end-->
+    </section>
+    <script src="{{ asset('admin/js/bootstrap.js') }}"></script>
+    <script src="{{ asset('admin/js/jquery.dcjqaccordion.2.7.js') }}"></script>
+    <script src="{{ asset('admin/js/scripts.js') }}"></script>
+    <script src="{{ asset('admin/js/jquery.slimscroll.js') }}"></script>
+    <script src="{{ asset('admin/js/jquery.nicescroll.js') }}"></script>
+    <!--[if lte IE 8]><script language="javascript" type="text/javascript" src="{{ asset('admin/js/flot-chart/excanvas.min.js') }}"></script><![endif]-->
+    <script src="{{ asset('admin/js/jquery.scrollTo.js') }}"></script>
+
+
+    <script>
+        CKEDITOR.replace('editor1');
+        CKEDITOR.replace('editor2');
+    </script>
+    <!-- morris JavaScript -->
+    <script>
+        $(document).ready(function() {
+            //BOX BUTTON SHOW AND CLOSE
+            jQuery('.small-graph-box').hover(function() {
+                jQuery(this).find('.box-button').fadeIn('fast');
+            }, function() {
+                jQuery(this).find('.box-button').fadeOut('fast');
+            });
+            jQuery('.small-graph-box .box-close').click(function() {
+                jQuery(this).closest('.small-graph-box').fadeOut(200);
+                return false;
+            });
+
+            //CHARTS
+            function gd(year, day, month) {
+                return new Date(year, month - 1, day).getTime();
+            }
+
+            graphArea2 = Morris.Area({
+                element: 'hero-area',
+                padding: 10,
+                behaveLikeLine: true,
+                gridEnabled: false,
+                gridLineColor: '#dddddd',
+                axes: true,
+                resize: true,
+                smooth: true,
+                pointSize: 0,
+                lineWidth: 0,
+                fillOpacity: 0.85,
+                data: [{
+                        period: '2015 Q1',
+                        iphone: 2668,
+                        ipad: null,
+                        itouch: 2649
+                    },
+                    {
+                        period: '2015 Q2',
+                        iphone: 15780,
+                        ipad: 13799,
+                        itouch: 12051
+                    },
+                    {
+                        period: '2015 Q3',
+                        iphone: 12920,
+                        ipad: 10975,
+                        itouch: 9910
+                    },
+                    {
+                        period: '2015 Q4',
+                        iphone: 8770,
+                        ipad: 6600,
+                        itouch: 6695
+                    },
+                    {
+                        period: '2016 Q1',
+                        iphone: 10820,
+                        ipad: 10924,
+                        itouch: 12300
+                    },
+                    {
+                        period: '2016 Q2',
+                        iphone: 9680,
+                        ipad: 9010,
+                        itouch: 7891
+                    },
+                    {
+                        period: '2016 Q3',
+                        iphone: 4830,
+                        ipad: 3805,
+                        itouch: 1598
+                    },
+                    {
+                        period: '2016 Q4',
+                        iphone: 15083,
+                        ipad: 8977,
+                        itouch: 5185
+                    },
+                    {
+                        period: '2017 Q1',
+                        iphone: 10697,
+                        ipad: 4470,
+                        itouch: 2038
+                    },
+
+                ],
+                lineColors: ['#eb6f6f', '#926383', '#eb6f6f'],
+                xkey: 'period',
+                redraw: true,
+                ykeys: ['iphone', 'ipad', 'itouch'],
+                labels: ['All Visitors', 'Returning Visitors', 'Unique Visitors'],
+                pointSize: 2,
+                hideHover: 'auto',
+                resize: true
+            });
+
+
+        });
+    </script>
+    <!-- calendar -->
+    <script type="text/javascript" src="{{ asset('admin/js/monthly.js') }}"></script>
+    <script type="text/javascript">
+        $(window).load(function() {
+
+            $('#mycalendar').monthly({
+                mode: 'event',
+
+            });
+
+            $('#mycalendar2').monthly({
+                mode: 'picker',
+                target: '#mytarget',
+                setWidth: '250px',
+                startHidden: true,
+                showTrigger: '#mytarget',
+                stylePast: true,
+                disablePast: true
+            });
+
+            switch (window.location.protocol) {
+                case 'http:':
+                case 'https:':
+                    // running on a server, should be good.
+                    break;
+                case 'file:':
+                    alert('Just a heads-up, events will not work when run locally.');
+            }
+
+        });
+    </script>
+    <!-- //calendar -->
 </body>
+
 </html>

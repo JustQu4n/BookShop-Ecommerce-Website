@@ -8,7 +8,7 @@
                     <!-- ========================================== SECTION – HERO ========================================= -->
                     <div id="hero" class="">
                         <div id="owl-main" class="owl-carousel owl-inner-nav owl-ui-sm">
-                  
+
                             <div class="item">
                                 <img src="{{ asset('frontend\assets\images\banner\Black_friday_Cyber_monday_mainbanner_Slide_840x320.jpg') }}"
                                     alt="" width="100%" height="100%">
@@ -140,7 +140,7 @@
                                                                 alt="" class="hover-image">
                                                         </a>
                                                     </div>
-                                                   
+
                                                     <div class="tag new"><span>new</span></div>
                                                 </div>
                                                 <!-- /.product-image -->
@@ -155,7 +155,7 @@
                                                     <!-- /.product-price -->
 
                                                 </div>
-                                                
+
                                             </div>
                                             <!-- /.product -->
 

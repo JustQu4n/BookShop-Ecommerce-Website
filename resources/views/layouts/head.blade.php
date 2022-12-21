@@ -1,26 +1,27 @@
-
 <div class=" login">
     <span>Chào mừng bạn đến với thế giới sách!</span>
 
     <ul>
         @php
-            $login_success = request()->session()->get('login_success');
+            $login_success = request()
+                ->session()
+                ->get('login_success');
         @endphp
-      @if ($login_success)
-        <li class="login-register">
-            <div class="dropdown">
-                <i class="dropbtn fa fa-user"></i>
-                <div class="dropdown-content">
-                    <a href="{{route('myAccount.')}}">Tài khoản của tôi</a>
-                    <a href="{{route('logout')}}">Đăng xuất</a>
-                    <a href="{{route('myAccount.order')}}">Đơn mua</a>
+        @if ($login_success)
+            <li class="login-register">
+                <div class="dropdown">
+                    <i class="dropbtn fa fa-user"></i>
+                    <div class="dropdown-content">
+                        <a href="{{ route('myAccount.') }}">Tài khoản của tôi</a>
+                        <a href="{{ route('logout') }}">Đăng xuất</a>
+                        <a href="{{ route('myAccount.order') }}">Đơn mua</a>
+                    </div>
                 </div>
-            </div>
-        </li>
-    @else 
-        <li class="login-register"><a href="{{route('login.')}}">Đăng nhập</a> or <a href="{{route('register')}}" style="color:#ff5740;">Đăng ký</a></li>
-          
-    @endif
+            </li>
+        @else
+            <li class="login-register"><a href="{{ route('login.') }}">Đăng nhập</a> or <a
+                    href="{{ route('registerindex') }}" style="color:#ff5740;">Đăng ký</a></li>
+        @endif
 
         <li id="icon-login">
             <a href="https://www.facebook.com/iamq.falconm/"></a><i class="fa fa-instagram" aria-hidden="true"></i></a>

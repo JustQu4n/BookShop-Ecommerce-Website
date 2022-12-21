@@ -34,10 +34,21 @@ class OrderDetail extends Model
                     -> selectRaw('count(book_id) as qty, book_id')
                     -> groupBy('book_id')
                     -> orderBy('qty', 'DESC')
-                    -> limit(10)
+                    -> limit(5)
                     -> get();
         return $list_book; 
     }
+
+    static  function getAllBestSelling() {
+        $list_book = DB::table('order_detail') 
+                    -> selectRaw('count(book_id) as qty, book_id')
+                    -> groupBy('book_id')
+                    -> orderBy('qty', 'DESC')
+                    -> get();
+        return $list_book; 
+    }
+
+
 
    
 }
