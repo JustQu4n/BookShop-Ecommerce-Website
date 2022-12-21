@@ -28,6 +28,7 @@ class UserController extends Controller
             $item->order_payed = $i;
 
         }
+       
         return view('admin.user.list_user', compact('list')); 
     }
 

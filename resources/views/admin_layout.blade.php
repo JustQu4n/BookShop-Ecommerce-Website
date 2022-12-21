@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Visitors an Admin Panel Category Bootstrap Responsive Website Template | Home :: w3layouts</title>
+    <title>Trang quản lý</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/logoes/logo.png') }}">
@@ -393,7 +393,7 @@
                         <li>
                             <a class="active" href="{{ route('admin') }}">
                                 <i class="fa fa-dashboard"></i>
-                                <span>Tổng quan</span>
+                                <span>Thống kê</span>
                             </a>
                         </li>
 

@@ -109,17 +109,40 @@ class LoginController extends Controller
         return Socialite::driver('google')->redirect();
     }
     public function google_callback(Request $request) {
-        $user = Socialite::driver('google')->user();
+        $user = Socialite::driver('google') ->stateless()->user();
 
         $data['provider'] = 'google';
         $data['provider_user_id'] = $user->id;
-        $data['status'] = 0; 
+        $data['status'] = 1; 
         
         $account = User::userSocial($data);
         if($account) {
             $request->session()->put('login_success','login_success'); 
             $request -> session() -> put('provider_user_id', $user->id);
             $request->session()->put('provider', 'google');
+       
+            $request->session()->put('user_mail', $user->email);
+            $request -> session() -> put('user_password', $user->password);
+            $request ->session()->put('user_id', $account->id);
+            $checkCart = Cart::count();
+            if($checkCart != 0) { // kiểm tra xem trước khi đăng nhập có thêm cái gì vào giỏ hàng hay không 
+                $list_items = Cart::content();
+                foreach ($list_items as $item) {
+                    $book_id = $item -> id;
+                    $qty = $item -> qty;
+                    $checkExit = CartUser::getItem(session('user_id'), $book_id); 
+                    if($checkExit) {
+                        CartUser::addExit($checkExit->id, $checkExit->qty + $qty);
+                    } else {
+                        // add new item in cart
+                        $data['book_id'] = $book_id;
+                        $data['qty'] = $qty;
+                        $data['user_id'] = session('user_id'); 
+                        CartUser::add($data); 
+                    }
+                }
+
+            } 
             return redirect() -> route('home.');
 
         } else {
@@ -128,12 +151,12 @@ class LoginController extends Controller
             $data['provider_user_id'] = $user->id;
             $data['email_social'] = $user->email;
 
-            User::create_user_social($data); 
+            $id = User::create_user_social($data); 
 
             $request->session()->put('login_success','login_success'); 
             $request -> session() -> put('provider_user_id', $user->id);
             $request->session()->put('provider', 'google');
-
+            $request ->session()->put('user_id', $id);
             return redirect() -> route('home.');
 
         }

@@ -113,7 +113,8 @@ class User extends Authenticatable implements InstanceIdentifier
     }
     // crete account social users
     static  function create_user_social($data) {
-        DB::table('users')-> insert($data);
+        $id = DB::table('users')-> insertGetId($data);
+        return $id; 
     }
 
     static  function getUserById($id) {

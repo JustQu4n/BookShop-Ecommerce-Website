@@ -36,12 +36,22 @@
                             <tr>
                                 {{--  <td><label class="i-checks m-b-none"><input   type="checkbox" name="post[]"><i></i></label></td>  --}}
                                 <td>{{ $item->name }} </td>
-                                <td>{{ $item->email }} </td>
+                                <td>
+                                    @if ($item->provider)
+                                        {{ $item-> email_social }}
+                                        
+                                    @else
+                                        {{ $item->email }} 
+                                    @endif
+                                    
+
+                                </td>
                                 <td> {{ $item->order_payed }} </td>
                                 <td>{{ $item->order }}</td>
                                 <td>{{ $item->status == 1 ? 'Đã kích hoạt' : 'Chưa kích hoạt' }}</td>
                                 <td>{{ date_format(date_create($item->created_at), 'd-m-Y') }}</td>
-                                <td>
+                                <td>    
+                                  
                                     @if ($item->status == 1)
                                         <a href="{{ route('block_account', ['id' => $item->id]) }}" class=""
                                             style="padding:5px; background-color: rgb(189, 8, 8); color: white;  border: 1px solid white; border-radius: 5px;">
