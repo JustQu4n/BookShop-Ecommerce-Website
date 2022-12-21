@@ -18,7 +18,7 @@
             </div>
         </li>
     @else 
-        <li class="login-register"><a href="{{route('login.')}}">Đăng nhập</a> or <a href="{{route('register')}}" style="color:#ff5740;">Đăng ký</a></li>
+        <li class="login-register"><a href="{{route('login.')}}">Đăng nhập</a> or <a href="{{route('registerindex')}}" style="color:#ff5740;">Đăng ký</a></li>
           
     @endif
 
