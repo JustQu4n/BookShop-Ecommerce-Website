@@ -1,0 +1,541 @@
+
+
+
+
+
+
+/* content */
+.content {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.content-container {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #f5f5f4;
+
+}
+
+.content-menu {
+    height: 150px;
+    /* background-color: #171717; */
+   background-image: url(../Images/Header/banner.jpg);
+
+}
+.tabcontent  {
+    margin-left: 90px;
+    margin-bottom: 20px;
+    margin-top : 20px;
+    width: 80%; 
+    padding: 20px; 
+    border: solid 0.5px  black; 
+    display: none;
+}
+span#u_0_4_Lt {
+    display: none;
+}
+.active {
+    display: inline-block !important;
+
+}
+.act {
+    background-color: grey !important;
+
+}
+/* tost */
+.toast {
+    width: 350px;
+    max-width: 100%;
+    font-size: .875rem;
+    pointer-events: auto;
+    background-color: rgba(255,255,255,.85);
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.1);
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    border-radius: 0.25rem;
+    z-index:1000000; 
+    position:absolute; 
+    right: 15px; top: 50px; 
+    display: block;
+
+}
+
+.content-menu h2 {
+    text-align: center;
+    color: #fff;
+    font-family: "Playfair Display", serif;
+    font-size: 3em;
+    font-weight: 100;
+    line-height: 1.021em;
+
+
+}
+
+.title-menu {
+    padding-top: 30px;
+}
+
+.title-menu p {
+    text-align: center;
+    color:#333334;
+    letter-spacing: 2px;
+}
+
+.title-menu a {
+    text-decoration: none;
+    color: #333334;
+    font-weight: 400;
+    font-size: 16px;
+
+}
+
+.title-menu a:hover {
+    color: #ff5740;
+}
+.toast-hide {
+    display: none !important;
+}
+#toast-msg {
+    background-color:rgb(211, 38, 38);
+}
+
+.title-menu a p {
+    font-size: 12px;
+}
+
+.content-book {
+    display: flex;
+    width: 100%;
+    padding-top: 30px;
+    margin-bottom: 50px;
+
+}
+.price {
+    display: inline-block !important;
+}
+
+.thumbnail-book {
+    width: 40% !important;
+    
+}
+.thumbnail-book img {
+    position: absolute;
+    /* overflow: hidden; */
+    width: 320px !important;
+    /* height: 510px; */
+    height: 366px;
+    margin-left: 110px;
+    box-shadow: 1px 1px 0px rgb(193 190 190), 2px 2px 0px rgb(193 190 190), 3px 3px 0px rgb(193 190 190), 4px 4px 0px rgb(193 190 190), 5px 5px 0px rgb(193 190 190), 6px 6px 0px rgb(193 190 190);
+}
+
+.thumbnail-book img:hover {
+   
+}
+
+
+.info-book {
+    width: 60%;
+    display: block;
+}
+
+.title-book {
+    width: 100%;
+    padding-left: 20px;
+}
+
+.sale {
+    width: 50px;
+    height: 25px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    background-color: #ff5740;
+    margin-top: 50px;
+}
+
+.sale span {
+    margin-left: 5px;
+    margin-top: 20px;
+}
+
+.title1{
+
+    font-family: "Playfair Display", serif;
+    font-size: 2.5em;
+    text-align: left;
+    margin-top: 10px;
+}
+
+.author {}
+
+.author span {
+    color: rgb(92, 92, 92);
+}
+
+.star {
+    padding-bottom: 5px;
+}
+.book-decription p  {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: justify !important;
+}
+
+.checked {
+    color: orange;
+}
+
+
+price {
+    padding-top: 5px;
+    padding-bottom: 10px;
+    display: inline-block;
+}
+.price p{
+    font-size: 26px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #ff5740;
+}
+
+.book-decription {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.publisher th {
+    padding-left: 50px;
+}
+
+.publisher td {
+    padding: 5px;
+}
+
+.id-book {
+    display: block;
+    padding-left: 20px;
+
+}
+
+.type-book {
+    display: flex;
+}
+
+.one .two {
+    display: block;
+}
+
+.e-book {
+    width: 80px;
+    height: 80px;
+    padding-top: 15px;
+    margin-right: 10px;
+    background-color: #ffff;
+    border: 1px solid #f5f5f4;
+    transition: all 0.5s ease-in-out;
+}
+
+.e-book i {
+    font-size: 2.5em;
+    margin-left: 15px;
+
+}
+
+.e-book:hover {
+    border: 2px solid;
+}
+
+.paper-book {
+    width: 80px;
+    height: 80px;
+    padding-top: 15px;
+    margin-left: 10px;
+    background-color: #ffff;
+    transition: 0.5s all linear; 
+}
+
+.paper-book i {
+    font-size: 2.5em;
+    margin-left: 15px;
+}
+
+.paper-book:hover {
+    border: 2px solid;
+}
+
+.title-ebook span {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.title-paperbook {
+    font-weight: bold;
+    font-size: 14px;
+    padding-left: 10px;
+    padding-top: 2px;
+}
+
+.price-bottom {
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.price-bottom span {
+    font-size: 25px;
+    font-weight: bold;
+    /* letter-spacing: 2px; */
+    color: #ff5740;
+
+}
+
+.qty-buy {
+    display: flex;
+    padding-top: 10px;
+}
+
+.qty {
+    padding-right: 10px;
+}
+
+.qty input {
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    font-weight: bold;
+
+}
+
+.buy button {
+    width: 150px;
+    height: 50px;
+    font-weight: bold;
+    color: #fff;
+    background-color: black;
+    letter-spacing: 2px;
+    transition: all 0.5s ease-in-out;
+}
+
+.buy button:hover {
+    background-color: #fff;
+    color: #000;
+    font-family: futura-pt, sans-serif;
+    letter-spacing: 2px;
+}
+.cart button {
+    width: 200px;
+    height: 50px;
+    font-weight: bold;
+    color: rgb(211, 38, 38);
+    background-color: black;
+    letter-spacing: 2px;
+    transition: all 0.5s ease-in-out;
+
+}
+.cart button:hover {
+    background-color: #fff;
+    color: #000;
+    font-family: futura-pt, sans-serif;
+    letter-spacing: 2px;
+}
+
+.hr {
+    width: 16em;
+}
+
+.tag-infor {
+    padding-top: 5px;
+}
+
+.tag-infor span:hover {
+    color: #de3241;
+}
+
+.book-description {}
+
+.bt-chg {
+    display: flex;
+    padding-left: 90px;
+
+}
+
+.bt-chg button {
+    width: 300px;
+    height: 50px;
+    font-weight: bold;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s linear; 
+
+}
+
+.bt-chg button:hover {
+    background-color: grey;
+    border-top: 2px solid;
+}
+
+.page-description {
+
+}
+
+.page-des {
+    width: 100%;
+ 
+}
+
+.paras {
+    color: #797979;
+}
+
+.paras p {
+    font-size: 18px;
+    padding-left: 90px;
+    padding-right: 50px;
+    padding-top: 30px;
+}
+
+.img-pdf-book iframe {
+    width: 100%;
+    height: 550px;
+}
+
+.relate-book{
+    width: 1400px;
+        margin: 0 auto;
+}
+.icon-relate {
+    display: flex;
+}
+
+.book-relate {
+    display: block;
+    margin-left: 35px;
+    padding-left: 30px;
+    padding-top: 10px;
+    margin-top: 20px;
+
+}
+
+.thumbnail-relate {
+    width: 100%;
+    height: 250px;
+    box-shadow: 1px 1px 0px rgb(193, 190, 190),
+            2px 2px 0px rgb(193, 190, 190),
+            3px 3px 0px rgb(193, 190, 190),
+            4px 4px 0px rgb(193, 190, 190),
+            5px 5px 0px rgb(193, 190, 190),
+            6px 6px 0px rgb(193, 190, 190);
+}
+
+.thumbnail-relate img {
+    width: 190px;
+    height: 249px;
+}
+
+.thumbnail-relate img:hover {
+    border: 1px solid;
+
+}
+
+.title-relate {
+    padding-top: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    text-align: center;
+}
+
+.related h2 {
+    font-size: 2.5em;
+    text-align: center;
+    color: rgb(103, 103, 103);
+}
+
+.related hr {
+    width: 350px;
+    margin-left: 530px;
+    height: 12px;
+
+}
+
+.author-relate {}
+
+.author-relate {
+    height: 20px;
+    color: #797979;
+}
+
+.author-relate p {
+    font-size: 16px;
+    text-align: center;
+}
+
+.star-relate {
+    text-align: center;
+}
+
+.price-relate {}
+
+.price-relate h6 {
+    text-align: center;
+    color: #de3241;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+.video-book{
+   width: 1400px;
+   margin: 0 auto;
+   height:700px;
+   padding-top: 30px;
+}
+.video-book h2{
+    text-align: center;
+     color: rgb(103, 103, 103);
+     font-style: italic;
+}
+.video-book p{
+    text-align: center;
+    /* padding-left: 50px;
+    padding-right: 50px; */
+    margin-right: 60px;
+    margin-left: 40px;
+    color: #707071;
+}
+.video-book video{
+    width: 900px;
+    height:500px;
+    margin-left: 220px;
+}
+.subcribe {
+    padding-bottom: 30px;
+    padding-top: 40px;
+    background-image: url(../images/Homeimg/newsletter-bg.png);
+}
+
+.subcribe h1 {
+    text-align: center;
+}
+
+.subcribe p {
+    text-align: center;
+}
+
+.subcribe input {
+    width: 500px;
+    height: 40px;
+    margin-left: 350px;
+    border: none;
+}
+
+.subcribe button {
+    height: 45px;
+    width: 150px;
+    font-weight: bold;
+    background-color: #212121;
+    border: none;
+    color: white;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: all 0.5s ease; 
+}
+

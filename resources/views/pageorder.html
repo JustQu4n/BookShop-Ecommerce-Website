@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Css/head.css">
+    <link rel="stylesheet" href="./Css/footer.css">
+    <link rel="stylesheet" href="./Css/home1.css">
+    <link rel="stylesheet" href="./Css/preload.css">
+    <link rel="stylesheet" href="./Css/cart.css">
+    <script src="./Js/home1.js"></script>
+
+    <link rel="stylesheet" href="./Css/ReposiveTablet.css">
+    <link rel="stylesheet" href="./Css/reposive.css">
+
+    <link rel="stylesheet" href="./Css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap" rel="stylesheet">
+    <link href="./fontawesome-free-6.1.1-web/css/all.css">
+    <link rel="stylesheet" href="./Icon/themify-icons/themify-icons.css">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+    <title>Cart</title>
+</head>
+
+<body>
+    <!-- <div id="center">
+        <div class="loading-screen">
+            <div class="loading-animation">
+                <img src="./Images/Header/New folder/logo.png" alt="" class="logo-loading ">
+                <div class="loading-bar"></div>
+            </div>
+        </div>
+    </div> -->
+
+
+    </script>
+
+    <script>
+        var loader = document.getElementById("center")
+        window.addEventListener("load", function () {
+            loader.style.display = "none";
+        })
+    </script>
+
+
+    <button class="scrollTop" onclick="topFunction()" id="myBtn" title="Go to top">
+        <i class="ti-arrow-up"></i>
+    </button>
+    <!-- head -->
+    <div id="header">
+        <div class="login">
+            <span>Welcome to World Bookl!</span>
+
+            <ul>
+                <li class="login-register"><a href="./login.html">Login</a> or <a href="./login.html"
+                        style="color:#ff5740;">Register</a></li>
+                <li id="icon-login">
+                    <a href="https://www.facebook.com/iamq.falconm/"></a> <i class="fa fa-instagram"
+                        aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/iamq.falconm/"><i class="fa fa-facebook"
+                            aria-hidden="true"></i></a>
+                    <a href="https://www.facebook.com/iamq.falconm/"><i class="fa fa-twitter"
+                            aria-hidden="true"></i></a>
+
+                </li>
+                <li>
+                    <a href="">
+                        <i class="fa fa-phone" aria-hidden="true"></i>
+                        Free call :
+                        <span id="phone-number">012-345-678</span>
+                    </a>
+
+                </li>
+            </ul>
+
+        </div>
+
+        <!-- this is nav -->
+        <div class="navigation" id="nav">
+ 
+            <div class="logo">
+               <a href="index.html"><img src="./Images/Header/New folder/logo3.png" alt=""></a>
+            </div>
+            <div class="search">
+                <input type="text" placeholder="Find Your Book...">
+                <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                <button id="menu-an" ><i class="ti-menu"></i></button>
+            </div>
+            <div class=" menu-bar" style="display: flex ">
+    
+                <a id="test" href="./index.html" class="color-line">HOME</a>
+                <a  href="./Shop.html" class="gen-a">SHOP</a>
+                <a  href="./blog.html" class="gen-a">BLOG</a>
+                <a  href="./contact.html" class="gen-a">CONTACT </a>
+                <a  href="./event.html" class="gen-a">EVENTS</a>      
+               <a id="cart" href="./pageorder.html"><i class="fa fa-shopping-bag" aria-hidden="true" style="color: red;"></i></a>  
+            </div>
+
+            <div class="menu-bartemp" id ="hide">
+                <a id="test" href="./index.html" class="color-line" >HOME</a>
+                <a  href="./Shop.html" class="gen-a">SHOP</a>
+                <a  href="./blog.html" class="gen-a" >BLOG</a>
+                <a  href="./contact.html" class="gen-a">CONTACT </a>
+                <a  href="./event.html" class="gen-a">EVENTS</a>      
+               <a id="cart" href="./pageorder.html" style="color: red;"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>  
+            </div>
+    
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+                $("#hide").hide()
+                $(document).ready(function(){
+                $("#menu-an").click(function(){
+                    $("#hide").toggle(1000);
+                });
+                });
+        </script>
+
+
+      
+        <!-- end head -->
+
+        <!-- content -->
+        <div class="container-fluid">
+            <div class="row">
+                <aside class="col-lg-9">
+                    <div class="card">
+                        <div class="table-responsive">
+                            <table class="table table-borderless table-shopping-cart">
+                                <thead class="text-muted">
+                                    <tr class="small text-uppercase">
+                                        <th scope="col">Product</th>
+                                        <th scope="col" width="120">Quantity</th>
+                                        <th scope="col" width="120">Price</th>
+                                        <th scope="col" class="text-right d-none d-md-block" width="200"></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <figure class="itemside align-items-center">
+                                                <div class="aside"><img
+                                                        src="./Images/book-home/category-filter-img-01.jpg"
+                                                        class="img-sm">
+                                                </div>
+                                                <figcaption class="info"> <a href="#" class="title text-dark"
+                                                        data-abc="true">The Son</a>
+                                                    <p class="text-muted small">TYPE: <br> Paper Book</p>
+                                                </figcaption>
+                                            </figure>
+                                        </td>
+                                        <td> <select class="form-control">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                            </select> </td>
+                                        <td>
+                                            <div class="price-wrap"> <var class="price">$10.00</var> <small
+                                                    class="text-muted">
+                                                    $9.20 each </small> </div>
+                                        </td>
+                                        <td class="text-right d-none d-md-block"> <a
+                                                data-original-title="Save to Wishlist" title="" href=""
+                                                class="btn btn-light" data-toggle="tooltip" data-abc="true"> <i
+                                                    class="fa fa-heart"></i></a> <a href="" class="btn btn-light"
+                                                data-abc="true"> Remove</a> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <figure class="itemside align-items-center">
+                                                <div class="aside"><img
+                                                        src="./Images/book-home/category-filter-img-02.jpg"
+                                                        class="img-sm">
+                                                </div>
+                                                <figcaption class="info"> <a href="#" class="title text-dark"
+                                                        data-abc="true">Deep Silence</a>
+                                                    <p class="text-muted small">TYPE: <br>Paper Book </p>
+                                                </figcaption>
+                                            </figure>
+                                        </td>
+                                        <td> <select class="form-control">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                                <option>4</option>
+                                            </select> </td>
+                                        <td>
+                                            <div class="price-wrap"> <var class="price">$15</var> <small
+                                                    class="text-muted"> $12
+                                                    each </small> </div>
+                                        </td>
+                                        <td class="text-right d-none d-md-block"> <a
+                                                data-original-title="Save to Wishlist" title="" href=""
+                                                class="btn btn-light" data-toggle="tooltip" data-abc="true"> <i
+                                                    class="fa fa-heart"></i></a> <a href=""
+                                                class="btn btn-light btn-round" data-abc="true"> Remove</a> </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <figure class="itemside align-items-center">
+                                                <div class="aside"><img
+                                                        src="./Images/BiaSach/new galaxy.jpg"
+                                                        class="img-sm">
+                                                </div>
+                                                <figcaption class="info"> <a href="#" class="title text-dark"
+                                                        data-abc="true">New Galaxy</a>
+                                                    <p class="small text-muted">TYPE:<br> E-Book</p>
+                                                </figcaption>
+                                            </figure>
+                                        </td>
+                                        <td> 
+                                            <select class="form-control">
+                                                <option>1</option>
+                                                <option>2</option>
+                                                <option>3</option>
+                                            </select> </td>
+                                        <td>
+                                            <div class="price-wrap"> <var class="price">$9</var> <small
+                                                    class="text-muted"> $6
+                                                    each</small> </div>
+                                        </td>
+                                        <td class="text-right d-none d-md-block"> <a
+                                                data-original-title="Save to Wishlist" title="" href=""
+                                                class="btn btn-light" data-toggle="tooltip" data-abc="true"> <i
+                                                    class="fa fa-heart"></i></a> <a href=""
+                                                class="btn btn-light btn-round" data-abc="true"> Remove</a> </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </aside>
+                <aside class="col-lg-3">
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group"> <label>Have coupon?</label>
+                                    <div class="input-group"> <input type="text" class="form-control coupon" name=""
+                                            placeholder="Coupon code"> <span class="input-group-append"> <button
+                                                class="btn btn-primary btn-apply coupon">Apply</button> </span> </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-body">
+                            <dl class="dlist-align">
+                                <dt>Total price:</dt>
+                                <dd class="text-right ml-3">$69.97</dd>
+                            </dl>
+                            <dl class="dlist-align">
+                                <dt>Discount:</dt>
+                                <dd class="text-right text-danger ml-3">- $10.00</dd>
+                            </dl>
+                            <dl class="dlist-align">
+                                <dt>Total:</dt>
+                                <dd class="text-right text-dark b ml-3"><strong>$59.97</strong></dd>
+                            </dl>
+                            <hr> <button>Purchase</button>
+                            </a>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+
+        <script src="./Js/cart.js"></script>
+
+        <!-- slide -->
+        <div class="red-slide">
+            <span class="get">
+                Get -30% purchase
+            </span>
+            <span id="black">
+                on order over $299.00
+            </span>
+
+            <button class="more" src="Shop.html">
+                MORE INFO
+            </button>
+        </div>
+        <!-- Footer Area Start Here -->
+        <footer class="off-white-bg2 pt-95 bdr-top pt-sm-55">
+            <!-- Footer Top Start -->
+            <div class="footer-top">
+                <div class="container">
+
+                    <!-- Signup-Newsletter End -->
+                    <div class="row">
+                        <!-- Single Footer Start -->
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <div class="single-footer mb-sm-40 s1">
+                                <h3 class="footer-title">Information</h3>
+                                <div class="footer-content">
+                                    <ul class="footer-list" type="none">
+                                        <li><a href="">Privacy Policy</a></li>
+                                        <li><a href="">Terms & Conditions</a></li>
+                                        <li><a href="">FAQs</a></li>
+                                        <li><a href="">Return Policy</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Footer Start -->
+
+                        <!-- Single Footer Start -->
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <div class="single-footer mb-sm-40 s2">
+                                <h3 class="footer-title">Website</h3>
+                                <div class="footer-content">
+                                    <ul class="footer-list" type="none">
+                                        <li><a href="./home.html">Home</a></li>
+                                        <li><a href="./event.html">Event</a></li>
+                                        <li><a href="./blog.html">Blog</a></li>
+                                        <li><a href="./">About Us</a></li>
+                                        <li><a href="./Shop.html">Shop</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Footer Start -->
+                        <!-- Single Footer Start -->
+                        <div class="col-lg-2 col-md-4 col-sm-6">
+                            <div class="single-footer mb-sm-40 s3">
+                                <h3 class="footer-title">My Account</h3>
+                                <div class="footer-content">
+                                    <ul class="footer-list" type="none">
+                                        <li><a href="contact.html">Contact Us</a></li>
+                                        <li><a href="#">My Account</a></li>
+                                        <li><a href="#">Order History</a></li>
+                                        <li><a href="wishlist.html">Wish List</a></li>
+                                        <li><a href="#">Newsletter</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Footer Start -->
+                        <!-- Single Footer Start -->
+                        <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="single-footer mb-sm-40 s4">
+                                <h3 class="footer-title">My Account</h3>
+                                <div class="footer-content">
+                                    <ul class="footer-list address-content" type="none">
+                                        <li><i class="lnr lnr-map-marker"></i> Address: Tran Dai Nghia Street,Ngu Hanh
+                                            Son,Da
+                                            Nang City
+                                        </li>
+                                        <li><i class="lnr lnr-envelope"></i><a href="#"> mail Us: Doansc1@vku.udn.vn
+                                            </a></li>
+                                        <li>
+                                            <i class="lnr lnr-phone-handset"></i> Phone:+84 826206225
+                                        </li>
+                                    </ul>
+                                    <div class="payment mt-25 bdr-top pt-30">
+                                        <a href="#"><img class="img" src="./Images/footer/1.png"
+                                                alt="payment-image"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Single Footer Start -->
+                    </div>
+                    <!-- Row End -->
+                </div>
+                <!-- Container End -->
+            </div>
+            <!-- Footer Top End -->
+            <!-- Footer Middle Start -->
+            <div class="footer-middle text-center">
+                <div class="container">
+                    <div class="footer-middle-content pt-20 pb-30">
+                        <ul class="social-footer">
+                            <li><a href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="https://twitter.com/"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a></li>
+                            <li><a href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a></li>
+                            <li><a href="#"><img src="./Images/footer/social-img1.png" alt="google play"></a></li>
+                            <li><a href="#"><img src="./Images/footer/social-img2.png" alt="app store"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- Container End -->
+            </div>
+            <!-- Footer Middle End -->
+            <!-- Footer Bottom Start -->
+            <div class="footer-bottom pb-30">
+                <div class="container">
+
+                    <div class="copyright-text text-center">
+                        <p>Copyright © 2022 <a target="_blank" href="#">GALAXY</a> All Rights Reserved.</p>
+                    </div>
+                </div>
+                <!-- Container End -->
+            </div>
+            <!-- Footer Bottom End -->
+        </footer>
+
+        <iframe style="display: none;" src="https://www.youtube.com/embed/vc2JKNfJE2U" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+        <iframe style="display: none;" src="https://www.youtube.com/embed/vc2JKNfJE2U" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe>
+        <!-- <iframe style="display: none;" src="https://www.youtube.com/embed/vc2JKNfJE2U" title="YouTube video player"
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+        </iframe> -->
+
+        <!-- Footer Area End Here -->
+
+</body>
+
+</html>

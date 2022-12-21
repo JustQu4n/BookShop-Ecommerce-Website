@@ -1,0 +1,267 @@
+.event-list {
+    width : 80%;
+    margin-left: 20%;
+    margin-right: 10%;
+    background-image: url(../images/Homeimg/newsletter-bg.png);
+   
+}
+#noidung {
+    background-color: #f8f9fa;
+   
+}
+.event {
+    padding-bottom: 25px;
+}
+.event span {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.event h3 {
+    display: inline-block;
+    padding-bottom: 30px;
+    font-family: 'PT Sans', sans-serif;
+}
+.img img {
+    width: 410px;
+    height: 275px;
+    transition: auto;
+    margin-left: 55px;
+}
+
+.text-event i {
+    color : #ff5740;
+}
+.eventnew a  {
+    text-decoration: none;
+    color : black;
+    transition: all 0.5s linear;
+
+}
+.eventnew a:hover {
+    color : #ff5740;
+}
+.eventnew {
+    display: block;
+    margin: 20px 0px;
+}
+
+
+.addre >span {
+    font-size: 20px;
+    color : #e78888;
+
+
+}
+
+.time-event {
+    font-size: 15px;
+    line-height: 19px;
+    font-weight: 400;
+    color : #ff5740;
+}
+.decription {
+    text-align: justify;
+    text-transform: revert;
+}
+.content-event {
+   
+}
+/* 
+tao duong */
+
+.event h3 {
+    position: relative;
+}
+.event h3::after {
+    content: "";
+    position: absolute;
+    width: 830px;
+    height: 1px;
+    background-color: black;
+    right: 43px;
+    bottom: 48px;
+}
+
+
+
+.tieude {
+    position: relative;
+}
+.tieude::after {
+    content: "";
+    position: absolute;
+    background-color: black;
+    width: 1px;
+    height: 240px;
+    right: 18px;
+    top: 0;
+}
+/* Reposive */
+
+@media (max-width: 1023px) {
+
+    .event h3 {
+        display: inline-block;
+        padding-bottom: 6px;
+        font-family: 'PT Sans', sans-serif;
+    }
+
+    .event-list {
+        width: 100%;      
+       
+        margin: 0 !important;
+    }
+
+    .event.row {
+        width: 100%;
+        margin: 0;
+    }
+
+
+    .event {
+        padding-bottom: 25px;
+        padding-left: 25px;
+    }
+    .event h3::after {
+        content: "";
+        position: absolute;
+        width: 622px;
+        height: 1px;
+        background-color: black;
+        right: 43px;
+        bottom: 18px;
+    }
+    .eventnew {
+       
+        margin: 5px 0px;
+    }
+
+    .time-event {
+        font-size: 14px;
+       
+    }
+
+    .tieude::after {
+        content: "";
+        height: 286px;
+        right: 10px;
+        
+    }
+
+    .img img {
+        width: 92%;
+        height: 100%;
+        transition: auto;
+        margin-left: 0;
+    }
+
+
+
+
+}
+
+
+/* tblet mini */
+@media (max-width: 770px) {
+
+    .event h3::after {
+        content: "";
+        position: absolute;
+        width: 550px;
+        height: 1px;
+        background-color: black;
+        right: 58px;
+        bottom: 18px;
+    }
+
+
+
+
+}
+
+
+/* reponsive mobile */
+
+@media (max-width: 720px) {
+    .img-sm {
+        width: 80px;
+        height: 135px;
+    }
+
+    .decription {
+        text-align: justify !important;
+    }
+    .event.row {
+
+        padding-top: 70px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .event h3::after {
+        content: "";
+        position: absolute;
+        width: 234px;
+        height: 1px;
+        background-color: black;
+        right: 26px;
+        bottom: 18px;
+    }
+
+    .event h3::after {
+        content: "";
+        position: absolute;
+        width: 223px;
+        height: 1px;
+        background-color: black;
+        right: 40px;
+        bottom: 18px;
+    }
+    .col-md-1.tieude {
+        display: none;
+    }
+
+    img#image {
+        margin-left: 10px;
+    }
+
+    .event span {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+}
+
+@media (max-width: 395px) {
+    .event h3::after {
+       
+        right: 0px;
+       
+    }
+}
+
+@media (max-width: 325px) {
+    .event h3::after {
+        content: "";
+        position: absolute;
+        width: 223px;
+        height: 1px;
+        background-color: black;
+        right: 0px;
+        bottom: 18px;
+    }
+
+    .event.row {
+        padding-top: 70px;
+        padding-left: 2px;
+        padding-right: 2px;
+    }
+
+    .event h3::after {
+        content: "";
+        position: absolute;
+        width: 160px;
+        height: 1px;
+        background-color: black;
+        right: 40px;
+        bottom: 18px;
+        right: 30px;
+    }
+}

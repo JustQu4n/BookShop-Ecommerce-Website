@@ -1,0 +1,41 @@
+.content-menu {
+    height: 150px;
+    background-color: #171717;
+
+}
+
+.content-menu h2 {
+    text-align: center;
+    color: #fff;
+    font-family: "Playfair Display", serif;
+    font-size: 3em;
+    font-weight: 100;
+    line-height: 1.021em;
+
+
+}
+
+.title-menu {
+    padding-top: 30px;
+}
+
+.title-menu p {
+    text-align: center;
+    color: #96999f;
+    letter-spacing: 2px;
+}
+
+.title-menu a {
+    text-decoration: none;
+    color: #96999f;
+
+}
+
+.title-menu a:hover {
+    color: #ff0015;
+}
+
+.title-menu a p {
+    font-size: 12px;
+}
+

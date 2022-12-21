@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600&display=swap');
+/* This is header */
+@import url(https://fonts.googleapis.com/css?family=Muli);
+
+.login {
+    padding-bottom: 15px;
+
+}
+
+#header .login {
+    width: 100%;
+    margin: 0 auto;
+    height: 50px;
+    display: flex;
+    background-color: #ffffff;
+    /* background-color: #171717;; */
+
+
+}
+#header {
+    width : 100%;
+   
+}
+
+.login ul {
+    margin-right: 100px;
+}
+.login-register {
+    position: relative;
+
+}
+
+.dropbtn {
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  .dropbtn::before {
+
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+    transition: all 0.3s;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    top: 35px; 
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 10;
+    transition: all 0.3s;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 2px 2px;
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s;
+  }
+  
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .dropdown:hover .dropbtn::before{
+        color: red; 
+  }
+
+.login span,
+ul {
+    flex: 5;
+    justify-content: space-around;
+    line-height: 50px;
+    font-size: 16px;
+    font-family: 'PT Sans', sans-serif;
+}
+
+.login>span {
+    padding-left: 40px;
+    color: rgb(133, 133, 133);
+}
+
+.login ul {
+    display: flex;
+}
+
+.login ul li {
+    list-style: none;
+
+}
+
+.login a {
+    text-decoration: none;
+    color: rgb(88, 87, 87);
+    font-size: 17px;
+
+}
+
+ul #register {
+    color: #ff5740;
+}
+.login #icon-login i {
+
+    display: inline-block;
+    margin: 0px 10px;
+
+}
+
+#icon-login i {
+    color: black;
+}
+
+li #phone-number {
+    font-size: 17px;
+    color: #ff5740;
+    font-weight: bold;
+}
+.login a:hover{
+    color: #ff5740;
+}
+/* nav */
+.navigation {
+    width: 100%;
+    margin: 0 auto;
+    height: 100px;
+    display: flex;
+    margin: 0px; 
+    background-color: ghostwhite;
+    z-index: 2;
+    position: sticky;
+    top: 0;
+}
+
+.logo {
+    width: 300px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.menu-bar {
+   position: relative;
+   top: 30%;
+   left: 0%;
+}
+
+.menu-bar a {
+    display: inline-block;
+    text-align: center;
+    /* font-family: 'Titillium Web', sans-serif; */
+    font-family: 'Muli', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 11px;
+    margin-right: 16px;
+    color: black;
+}
+.search{
+    padding-top: 30px;
+    display: flex;
+}
+.search{
+    margin-left: 30px;
+}
+.search input {
+    width: 350px;
+    height: 35px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border: 1px solid #bcbcc0;
+    border-right: none;
+    outline: none;
+}
+.search ::placeholder {
+    color: rgb(229, 207, 207);
+    padding-left:20px;
+}
+.search button {
+    width: 60px;
+    height: 35px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: 1px solid #bcbcc0;
+    background-color: #ffffff;
+    border-left: none;
+    margin-bottom: 60px;
+    color:black;
+}
+
+
+.menu-bar a:hover {
+    color: #ff5740;
+    transition: all 0.5s ease;
+
+}
+.menu-bar i {
+    padding-left: 10px;
+    font-size: 25px;
+
+}
+.menu-bar i:hover{
+    color: #ff5740;
+        transition: all 0.5s ease;
+}
+
+#menu-an {
+    display: none;
+    position: absolute;
+    left: 710px;
+    width: 55px;
+    height: 50px;
+    top: 30px;
+    border: none;
+    background: ghostwhite;
+    
+}
+#menu-an  {
+    
+    background: none;
+}
+#menu-an i {
+    font-size: 45px ; 
+}
+
+.menu-bartemp{
+    right: 0;
+    display : flex;
+    flex-direction: column;
+    position: absolute;
+    top: 77px;       
+    padding-top: 30px;
+    background: white;
+    height: 100vh;
+    width: 50vw;
+   
+    
+
+}
+
+
+
+.menu-bartemp a {
+   
+    padding: 5px;
+    display: inline-block;
+    text-align: center;
+   
+    font-family: 'Muli', Arial, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-left: 11px;
+    margin-right: 16px;
+    color: black;
+}
+
+/* thuộc tính chung  */
+
+/* reponsive */
+
+
+
+
+/* phone */
+@media (max-width: 393px) {
+
+
+
+
+
+    
+}

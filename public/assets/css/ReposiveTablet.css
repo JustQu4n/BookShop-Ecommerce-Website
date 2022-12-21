@@ -1,0 +1,246 @@
+
+
+@media (max-width: 1023px ) {
+
+    
+    .login ul {
+        margin-right: 0px;
+        padding-left: 0px;
+        display: inline-block;
+    }
+    .login ul li {
+        display: inline-block;
+        padding-right: 40px;
+    }
+
+    .login a {
+        font-size: 15px;
+    }
+
+    .login #icon-login i {
+        
+        margin: 0px 1px;
+        font-size: 19px;
+    }
+
+    li #phone-number {
+        font-size: 15px;
+    }
+
+    .navigation {
+        height: 77px;
+    }
+
+    .search {
+        margin-left: 0px;
+        padding-top: 25px;
+        display: flex;
+        position: relative;
+    }
+    .search button {     
+        height: 29px;
+        margin-bottom: 0px;
+    }
+
+    .search input {
+        width: 405px;
+        height: 29px;
+        font-size: 15px;
+    }
+
+    .search button {
+        width: 30px;
+        height: 29px;
+        
+    }
+   
+    .logo {
+        width: 185px;
+    }
+
+    .menu-bar {
+        display: none !important;
+        
+    }
+
+    
+    .login span, ul {
+        /* flex: 5; */
+        display: inline-block;
+        justify-content: space-around;
+        line-height: 50px;
+        font-size: 16px;
+        font-family: 'PT Sans', sans-serif;
+    }
+
+    .login>span {
+        padding-left: 22px;
+        flex: 3;
+    }
+    button#menu-an {
+        position: absolute;
+        top: 0;
+        top: 5px;
+        border: none;
+        display: block;
+        left: 560px;
+        top: 10px;
+        right: 0px;
+        bottom: 9px;
+        z-index: 99;
+    }
+
+    #menu-an i {
+        font-size: 30px;
+    }
+   
+
+   
+    /* slider bar  */
+
+    #img-book {
+        width: 362px;
+        margin-left: 50px;
+        position: absolute;
+        top: 5%;
+    }
+
+    .title-banner h1 {
+        font-size: 40px;
+    }
+
+    .category-discorve {
+        display: inline-block;
+    }
+
+
+
+    .title-banner {
+        margin-left: 45%;
+    }
+    
+
+    /* content  */
+
+    .display-v {
+    
+        display: inline-block;
+        margin-top: 50px;
+        height: 330px;
+    }
+
+    .book-show {
+        display: inline-block;
+    }
+
+    .discorvebook {
+        margin-top: 50px;
+        height: 1100px;
+    }
+
+
+
+    .smallbanner {
+        width: 100%;  
+        display: flex;
+        position: relative;
+        left: 0;
+    }
+
+    .left-info {
+        width: 48%;
+        background-color: #ff5740;
+        display: inline-block;
+    }
+    
+    .right-img {
+        width: 50%;
+        height: 240px;
+        display: inline-block;
+    }
+
+    /* author book  */
+
+    .what-new {
+        display: none; 
+    }
+
+    .info-author {
+        width: 423px;
+        /* border: 1px solid; */
+        height: 500px;
+        position: relative;
+        left: 5%;
+        padding-left: 30px;
+    }
+
+    .content-container {
+        /* width: 1345px; */
+        width: 100%;
+        margin: 0 auto;
+        margin: 0 auto;
+    }
+
+    .collection-book-title button {    
+        left: 14%;
+    }
+
+    #black:before {
+        content: "";
+        width: 0;
+        height: 0;
+    }
+
+    .red-slide .more {  
+        right: 10px;
+        bottom: 10px;
+    }
+
+}
+@media (max-width: 790px) {
+
+    #header .login {
+       
+        height: 50px;
+        background-color: #ffffff;
+        display: inline-block;
+    }
+
+    .login ul {
+        margin-right: 0px;
+        padding-left: 115px;
+        display: inline-block;
+    }
+
+    .login ul li {
+        display: inline-block;
+        padding-right: 32px;
+    }
+
+
+
+
+    .title-banner {
+        bottom: 55%;
+        left: 51%;
+    }
+    .ebook {
+        width: 373px;
+       
+    }
+    button#menu-an {
+    position: absolute;
+    top: 0;
+    top: 5px;
+    border: none;
+    display: block;
+    top: 15px;
+    /* right: -17px; */
+    bottom: 9px;
+    left: 117%;
+    z-index: 99;
+}
+
+}
+
+
