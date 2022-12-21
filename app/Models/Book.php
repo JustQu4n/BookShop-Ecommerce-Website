@@ -286,7 +286,12 @@ class Book extends Model
 
     // get book rating 
     static function getBookRating() {
-        $lists_books = DB::table('book') -> orderBy('rating', 'DESC') -> limit(10) -> get();
+        $lists_books = DB::table('book') -> orderBy('rating', 'DESC') -> limit(5) -> get();
+        return $lists_books; 
+    }
+
+    static function getAllBookRating() {
+        $lists_books = DB::table('book') -> orderBy('rating', 'DESC')-> get();    
         return $lists_books; 
     }
 

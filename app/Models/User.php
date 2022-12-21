@@ -83,6 +83,10 @@ class User extends Authenticatable implements InstanceIdentifier
         DB::table('users') -> where('id', $id) -> update(['status' => 1, 'token' => null]); 
     }
 
+    static function block_account($id) {
+        DB::table('users') -> where('id', $id) -> update(['status' => 0]); 
+    }
+
     static function getUserByEmail($email) {
         $user = DB::table('users') -> where('email', $email) -> first();
         return $user;
@@ -125,6 +129,11 @@ class User extends Authenticatable implements InstanceIdentifier
     static  function getUserActive() {
         $list_user = DB::table('users') -> where('status', 1) -> get(); 
         return $list_user; 
+    }
+
+    static function getAllUsers() {
+        $list = DB::table('users')->get();
+        return $list; 
     }
 
 }

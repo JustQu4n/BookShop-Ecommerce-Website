@@ -42,10 +42,33 @@ class AdminController extends Controller
         $data['book_qty'] = sizeof(Book::getAllBook());
         $data['order_qty'] = sizeof(Order::getAllOrder());
         $data['event_qty'] = sizeof(Event::getListEventsActicve());
-
-            
-
         
+  
         return view('admin.dashboard', compact('books_rating', 'book_sell', 'data'));
+    }
+
+    public function list_view() {
+      $list = Book::getAllBookRating();
+      $i = 0; 
+      foreach($list as $book) {
+        $book->number = ++$i; 
+      }
+      return view('admin.thong_ke.list_view', compact('list')); 
+    }
+
+    public function list_order() {
+      $books_bestSell = OrderDetail::getBestSelling();
+      $list = null; 
+      $i = 0 ; 
+      foreach($books_bestSell as $book) {
+          $infor_book= Book::getBook($book->book_id);
+          $item['book'] = $infor_book;
+          $item['qty'] = $book->qty;  
+          $list[$i] = $item; 
+          $i++; 
+      }
+
+    
+      return view('admin.thong_ke.list_order', compact('list'));
     }
 }

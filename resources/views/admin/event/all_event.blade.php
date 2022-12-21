@@ -1,130 +1,140 @@
 @extends('admin_layout')
 
 @section('admin_content')
-<div class="table-agile-info">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        Tất cả sự kiện
-      </div> 
-      <div class="row w3-res-tb">
-        <div class="my-3">  
-          @php
-            $msg = request()->session()->get('msg');
-          @endphp
-      
-          @if ($msg)
-              <div class="alert">
-                <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span> 
-                <strong>Thành công!</strong> {{$msg}}.
-              </div>
-              @php
-                  request()->session()->put('msg', null);
-              @endphp
-          @endif
-        </div>
-        <div class="col-sm-5 m-b-xs">
-          <select class="input-sm form-control w-sm inline v-middle">
-            <option value="0">Bulk action</option>
-            <option value="1">Delete selected</option>
-            <option value="2">Bulk edit</option>
-            <option value="3">Export</option>
-          </select>
-          <button class="btn btn-sm btn-default">Apply</button>                
-        </div>
-        <div class="col-sm-4">
-        </div>
-        <div class="col-sm-3">
-          <div class="input-group">
-            <input type="text" class="input-sm form-control" placeholder="Search">
-            <span class="input-group-btn">
-              <button class="btn btn-sm btn-default" type="button">Go!</button>
-            </span>
-          </div>
-        </div>
-      </div>
-      <div class="table-responsive">
-        <table class="table table-striped b-t b-light">
-          <thead>
-            <tr>          
-              <th>Tên sự kiện</th>
-              <th>Hình ảnh</th>
-              <th>Thời gian bắt đầu </th>
-              <th>Thời gian kết thúc</th>
-              <th>Địa chỉ</th>
-              <th>Mô tả sự kiện</th>
-              <th>Trạng thái</th>
-              <th>Ngày thêm</th>
-              <th>Ngày cập nhật</th>
-              <th style="width:30px;"></th>
-            </tr>
-          </thead>
-          <tbody>
-            @foreach ($list_events as $item)
-              <tr>
-                <td>{{$item->name}}</td>
-                <td><img src="{{asset("uploads/events/$item->image")}}" alt="" style="width:100px; "></td>
-                <td>
-                    <span class="text-ellipsis">
-                        @php
-                            echo    $item->start_hours." ".date('d-m-Y', strtotime($item->start_time));
-                        @endphp
-                    </span>
-                </td>
-                <td>
-                    <span class="text-ellipsis">
-                        @php
-                        echo    $item->end_hours." ".date('d-m-Y', strtotime($item->end_time));
-                        @endphp
-                    </span>
-                </td>
-                <td>{{$item->address}}</td>
-                <td>{!! $item->description !!}</td>
-                <td><span class="text-ellipsis">
-                        @if ($item->status ==1)
-                            <a href="{{route('event.unactive', ['id' => $item->id])}}"><sapn class="">Hiện</sapn></a>
-                        @else 
-                            <a href="{{route('event.active', ['id' => $item->id])}}"><sapn>Ẩn</sapn></a>
-                        @endif
+    <div class="table-agile-info">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Tất cả sự kiện
+            </div>
+            <div class="row w3-res-tb">
+                <div class="my-3">
+                    @php
+                        $msg = request()
+                            ->session()
+                            ->get('msg');
+                    @endphp
 
-                    </span>
-                </td>
-                
-                <td>
-                    <span class="text-ellipsis">
+                    @if ($msg)
+                        <div class="alert">
+                            <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                            <strong>Thành công!</strong> {{ $msg }}.
+                        </div>
                         @php
-                            echo date('d-m-Y', strtotime($item->created_at));
+                            request()
+                                ->session()
+                                ->put('msg', null);
                         @endphp
-                    </span>
-                </td>
+                    @endif
+                </div>
+                <div class="col-sm-5 m-b-xs">
+                    <select class="input-sm form-control w-sm inline v-middle">
+                        <option value="0">Bulk action</option>
+                        <option value="1">Delete selected</option>
+                        <option value="2">Bulk edit</option>
+                        <option value="3">Export</option>
+                    </select>
+                    <button class="btn btn-sm btn-default">Apply</button>
+                </div>
+                <div class="col-sm-4">
+                </div>
+                <div class="col-sm-3">
+                    <div class="input-group">
+                        <input type="text" class="input-sm form-control" placeholder="Search">
+                        <span class="input-group-btn">
+                            <button class="btn btn-sm btn-default" type="button">Go!</button>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="table-responsive">
+                <table class="table table-striped b-t b-light">
+                    <thead>
+                        <tr>
+                            <th>Tên sự kiện</th>
+                            <th>Hình ảnh</th>
+                            <th>Thời gian bắt đầu </th>
+                            <th>Thời gian kết thúc</th>
+                            <th>Địa chỉ</th>
+                            <th>Mô tả sự kiện</th>
+                            <th>Trạng thái</th>
+                            <th>Ngày thêm</th>
+                            <th>Ngày cập nhật</th>
+                            <th style="width:30px;"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach ($list_events as $item)
+                            <tr>
+                                <td>{{ $item->name }}</td>
+                                <td><img src="{{ asset("uploads/events/$item->image") }}" alt=""
+                                        style="width:100px; "></td>
+                                <td>
+                                    <span class="text-ellipsis">
+                                        @php
+                                            echo $item->start_hours . ' ' . date('d-m-Y', strtotime($item->start_time));
+                                        @endphp
+                                    </span>
+                                </td>
+                                <td>
+                                    <span class="text-ellipsis">
+                                        @php
+                                            echo $item->end_hours . ' ' . date('d-m-Y', strtotime($item->end_time));
+                                        @endphp
+                                    </span>
+                                </td>
+                                <td>{{ $item->address }}</td>
+                                <td>{!! $item->description !!}</td>
+                                <td><span class="text-ellipsis">
+                                        @if ($item->status == 1)
+                                            <a href="{{ route('event.unactive', ['id' => $item->id]) }}">
+                                                <sapn class="">Hiện</sapn>
+                                            </a>
+                                        @else
+                                            <a href="{{ route('event.active', ['id' => $item->id]) }}">
+                                                <sapn>Ẩn</sapn>
+                                            </a>
+                                        @endif
 
-                <td><span class="text-ellipsis">
-                  @php
-                      $up = date('d-m-Y', strtotime($item->updated_at));
-                      $date1 = strtotime($up);
-                      $date2 = strtotime('1970-01-01'); 
-                      if ($date1  > $date2) {
-                         echo $up;
-                      } else {
-                        
-                      }                 
-                  @endphp
-                  </span>
-                </td>
-                <td>
-                  <a href="{{route('event.update', ['id' => $item->id])}}" class="active" ui-toggle-class="" >
-                    <i class="fa fa-pencil-square-o text-success text-active"></i>
-                  </a>
-                  <a href="{{route('event.delete', ['id' => $item->id])}}"  class="active" ui-toggle-class="">
-                     <i class="fa fa-times text-danger text"></i>
-                  </a>
-                </td>
-            </tr>
-            @endforeach
-            
-          </tbody>
-        </table>
-      </div>
-   
+                                    </span>
+                                </td>
+
+                                <td>
+                                    <span class="text-ellipsis">
+                                        @php
+                                            echo date('d-m-Y', strtotime($item->created_at));
+                                        @endphp
+                                    </span>
+                                </td>
+
+                                <td><span class="text-ellipsis">
+                                        @php
+                                            $up = date('d-m-Y', strtotime($item->updated_at));
+                                            $date1 = strtotime($up);
+                                            $date2 = strtotime('1970-01-01');
+                                            if ($date1 > $date2) {
+                                                echo $up;
+                                            } else {
+                                            }
+                                        @endphp
+                                    </span>
+                                </td>
+                                <td>
+                                    <a href="{{ route('event.update', ['id' => $item->id]) }}" class="active"
+                                        ui-toggle-class="">
+                                        <i class="fa fa-pencil-square-o text-success text-active"></i>
+                                    </a>
+                                    <a href="{{ route('event.delete', ['id' => $item->id]) }}" class="active"
+                                        ui-toggle-class="">
+                                        <i class="fa fa-times text-danger text"></i>
+                                    </a>
+                                </td>
+                            </tr>
+                        @endforeach
+
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
     </div>
-  </div>
 @endsection

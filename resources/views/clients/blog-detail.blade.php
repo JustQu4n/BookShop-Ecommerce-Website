@@ -1,23 +1,23 @@
 @extends('layouts.main')
 
 @section('title')
-    Blog   
+    Blog
 @endsection
 
 @section('link')
-    <link rel="stylesheet" href="{{asset('assets/css/head.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/footer.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/blog.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/subPage.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/preload.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/blog-detail.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/head.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/blog.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/subPage.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/preload.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/blog-detail.css') }}">
 
-    <link rel="stylesheet" href="{{asset('assets/css/ReposiveTablet.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/reposive.css')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/scroollTop.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/ReposiveTablet.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/reposive.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/scroollTop.css') }}">
 
-    <script src="{{asset('assets/js/home.js')}}"></script>
-    <script src="{{asset('assets/js/home1.js')}}"></script>
+    <script src="{{ asset('assets/js/home.js') }}"></script>
+    <script src="{{ asset('assets/js/home1.js') }}"></script>
 
 
 
@@ -28,92 +28,89 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;600&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{asset('assets/Icon/themify-icons/themify-icons.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/Icon/themify-icons/themify-icons.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="{{asset('assets/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 @endsection
 
 @section('navigation')
-<div class="navigation" id="nav">
- 
-    <div class="logo">
-       <a href="{{route('home.')}}"><img src="{{asset('assets/images/logoes/logo3.png')}}" alt=""></a>
-    </div>
-    <div class="search">
-        <input type="text" placeholder="Find Your Book...">
-        <button><i class="fa fa-search" aria-hidden="true"></i></button>
-        <button id="menu-an" ><i class="ti-menu"></i></button>
-    </div>
-    <div class=" menu-bar" style="display: flex ">
+    <div class="navigation" id="nav">
 
-        <a id="test" href="{{route('home.')}}" class="color-line" >Trang chủ</a>
-        <a  href="{{route('shop.')}}" class="gen-a">Shop</a>
-        <a  href="#" class="gen-a" style="color: red;" >Blog</a>
-        <a  href="{{route('contact.')}}" class="gen-a">Liên hệ </a>
-        <a  href="{{route('event.')}}" class="gen-a">Sự kiện</a>      
-       <a id="cart" href="{{route('cart.')}}"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>  
-    </div>
+        <div class="logo">
+            <a href="{{ route('home.') }}"><img src="{{ asset('assets/images/logoes/logo3.png') }}" alt=""></a>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Find Your Book...">
+            <button><i class="fa fa-search" aria-hidden="true"></i></button>
+            <button id="menu-an"><i class="ti-menu"></i></button>
+        </div>
+        <div class=" menu-bar" style="display: flex ">
 
-    <div class="menu-bartemp" id ="hide">
-        <a id="test" href="{{route('home.')}}" class="color-line" >Trang chủ</a>
-        <a  href="{{route('shop.')}}" class="gen-a">Shop</a>
-        <a  href="#" class="gen-a" style="color: red;" >Blog</a>
-        <a  href="{{route('contact.')}}" class="gen-a">Liên hệ </a>
-        <a  href="{{route('event.')}}" class="gen-a">Sự kiện</a>      
-       <a id="cart" href="{{route('cart.')}}"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>  
-    </div>
+            <a id="test" href="{{ route('home.') }}" class="color-line">Trang chủ</a>
+            <a href="{{ route('shop.') }}" class="gen-a">Shop</a>
+            <a href="#" class="gen-a" style="color: red;">Blog</a>
+            <a href="{{ route('contact.') }}" class="gen-a">Liên hệ </a>
+            <a href="{{ route('event.') }}" class="gen-a">Sự kiện</a>
+            <a id="cart" href="{{ route('cart.') }}"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+        </div>
 
-</div>
-    
+        <div class="menu-bartemp" id="hide">
+            <a id="test" href="{{ route('home.') }}" class="color-line">Trang chủ</a>
+            <a href="{{ route('shop.') }}" class="gen-a">Shop</a>
+            <a href="#" class="gen-a" style="color: red;">Blog</a>
+            <a href="{{ route('contact.') }}" class="gen-a">Liên hệ </a>
+            <a href="{{ route('event.') }}" class="gen-a">Sự kiện</a>
+            <a id="cart" href="{{ route('cart.') }}"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+        </div>
+
+    </div>
 @endsection
 
 @section('indexing')
-<div class="content-menu">
-    <div class="title-menu">
-        <h2>Blog</h2>
-        <p><a href="">Trang chủ</a>-><a href="">Blog</a></p>
+    <div class="content-menu">
+        <div class="title-menu">
+            <h2>Blog</h2>
+            <p><a href="">Trang chủ</a>-><a href="">Blog</a></p>
+        </div>
     </div>
-</div>
-    
 @endsection
 
 
 
 @section('content')
-<div class="container mt-5">
-    <div class="row">
-        @foreach ($blog as $blog_detail)
-            
-     
-        <div class="col-lg-12">
-            <!-- Post content-->
-            <article>
-                <!-- Post header-->
-                <header class="mb-4">
-                    <!-- Post title-->
-                    <h1 class="fw-bolder mb-1">{{$blog_detail->title}}</h1>
-                    <!-- Post meta content-->
-                    <div class="text-muted fst-italic mb-2">Posted on January 1, 2022 by Start Bootstrap</div>
-                    <!-- Post categories-->
-                    <a class="badge bg-secondary text-decoration-none link-light" href="#!">Web Design</a>
-                    <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>
-                </header>
-                <!-- Preview image figure-->
-                <figure class="mb-4"><img class="img-fluid rounded" src="{{asset('uploads/blogs/'.$blog_detail->image)}}" alt="..." /></figure>
-                <!-- Post content-->
-                <section class="mb-5">
-                  <p>{!!$blog_detail->content!!}</p>
-                </section>
-            </article>
-            <!-- Comments section-->
-            <section class="mb-5">
-                <div class="card bg-light">
-                    {{-- <div class="card-body">
+    <div class="container mt-5">
+        <div class="row">
+            @foreach ($blog as $blog_detail)
+                <div class="col-lg-12">
+                    <!-- Post content-->
+                    <article>
+                        <!-- Post header-->
+                        <header class="mb-4">
+                            <!-- Post title-->
+                            <h1 class="fw-bolder mb-1">{{ $blog_detail->title }}</h1>
+                            <!-- Post meta content-->
+                            <div class="text-muted fst-italic mb-2">Posted on January 1, 2022 by Start Bootstrap</div>
+                            <!-- Post categories-->
+                            <a class="badge bg-secondary text-decoration-none link-light" href="#!">Web Design</a>
+                            <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>
+                        </header>
+                        <!-- Preview image figure-->
+                        <figure class="mb-4"><img class="img-fluid rounded"
+                                src="{{ asset('uploads/blogs/' . $blog_detail->image) }}" alt="..." /></figure>
+                        <!-- Post content-->
+                        <section class="mb-5">
+                            <p>{!! $blog_detail->content !!}</p>
+                        </section>
+                    </article>
+                    <!-- Comments section-->
+                    <section class="mb-5">
+                        <div class="card bg-light">
+                            {{-- <div class="card-body">
                         <!-- Comment form-->
                         <form class="mb-4"><textarea class="form-control" rows="3" placeholder="Join the discussion and leave a comment!"></textarea></form>
                         <!-- Comment with nested comments-->
@@ -150,12 +147,12 @@
                             </div>
                         </div>
                     </div> --}}
+                        </div>
+                    </section>
                 </div>
-            </section>
-        </div>
-        @endforeach
-        <!-- Side widgets-->
-        {{-- <div class="col-lg-4">
+            @endforeach
+            <!-- Side widgets-->
+            {{-- <div class="col-lg-4">
             <!-- Search widget-->
             <div class="card mb-4">
                 <div class="card-header">Search</div>
@@ -194,6 +191,6 @@
                 <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
             </div>
         </div> --}}
+        </div>
     </div>
-</div>
 @endsection

@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="{{asset('assets/images/logoes/logo.png')}}">
-    <link rel="stylesheet" href="{{asset('assets/css/sweetalert.css')}}">
+    <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/logoes/logo.png') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/sweetalert.css') }}">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   
-    
+
+
     <title>@yield('title')</title>
     @yield('link')
 </head>
+
 <body>
 
     @include('layouts/loadpage')
     <div id="header">
         @include('layouts/head')
-   
+
         <!-- this is nav -->
         @yield('navigation')
         @include('layouts/scriptHead')
@@ -28,8 +30,8 @@
     @include('layouts/footer')
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="{{asset('assets/js/sweetalert.js')}}"></script>
-<script type="">
+    <script src="{{ asset('assets/js/sweetalert.js') }}"></script>
+    <script type="">
     $(document).ready(function () {
         $('.add-cart').click(function () {
             event.preventDefault();
@@ -76,7 +78,8 @@
         }); 
     });
 </script>
-    
-    
+
+
 </body>
+
 </html>

@@ -36,7 +36,7 @@ class AuthenController extends Controller
                  
               ]
           );
-     $data = $request->all();
+      $data = $request->all();
       $admin = new Admin();
       $admin->admin_name = $data['admin_name'];
       $admin->admin_email = $data['admin_email'];
@@ -55,16 +55,13 @@ class AuthenController extends Controller
           $request->validate(
             [
                 'admin_email' =>'required|email',
-                'admin_password'=>'required',
-
-                
+                'admin_password'=>'required',            
             ],
             [
                 'admin_email.required' =>'Email bắt buộc nhập vào  ',
                 'admin_email.email' =>'Email không hợp lệ  ',
                 'admin_password.required' =>'Mật khẩu bắt buộc nhập vào  ',
-
-               
+      
             ]
         );
 

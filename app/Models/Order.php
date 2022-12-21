@@ -56,5 +56,11 @@ class Order extends Model
         return $order ; 
     }
 
+    static function count_order($user_id) {
+        $result = DB::table('order') -> where('user_id', $user_id) ->  get(); 
+        return $result;
+    }
+
+    
     
 }

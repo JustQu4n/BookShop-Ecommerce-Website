@@ -82,42 +82,45 @@
 @endsection
 
 @section('content')
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
-<section class="blog-listing gray-bg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css"
+        integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+    <section class="blog-listing gray-bg">
         <div class="container">
             <div class="row align-items-start">
                 <div class="col-lg-8 m-15px-tb">
                     <div class="row">
                         @foreach ($list_blog as $blog)
-                        
-                        <div class="col-sm-6">
-                            <div class="blog-grid">
-                                <div class="blog-img">
-                                    <div class="date">
-                                        <span>04</span>
-                                        <label>FEB</label>
-                                    </div>
-                                    <a href="{{URL::to('/blog-detail/'.$blog->id)}}">
-                                        <img src="{{asset('uploads/blogs/'.$blog->image)}}" title="" alt="" height="250">
-                                    </a>
-                                </div>
-                                <div class="blog-info" style="height:250px">
-                                    <h5><a href="{{URL::to('/blog-detail/'.$blog->id)}}">{{$blog->title}}</a></h5>
-                                    <p>{!!$blog->content_blog_short!!}</p>
-                                    <div class="btn-bar">
-                                        <a href="{{URL::to('/blog-detail/'.$blog->id)}}" class="px-btn-arrow">
-                                            <span>Xem thêm</span>
-                                            <i class="arrow"></i>
+                            <div class="col-sm-6">
+                                <div class="blog-grid">
+                                    <div class="blog-img">
+                                        <div class="date">
+                                            <span>04</span>
+                                            <label>FEB</label>
+                                        </div>
+                                        <a href="{{ URL::to('/blog-detail/' . $blog->id) }}">
+                                            <img src="{{ asset('uploads/blogs/' . $blog->image) }}" title=""
+                                                alt="" height="250">
                                         </a>
+                                    </div>
+                                    <div class="blog-info" style="height:250px">
+                                        <h5><a href="{{ URL::to('/blog-detail/' . $blog->id) }}">{{ $blog->title }}</a>
+                                        </h5>
+                                        <p>{!! $blog->content_blog_short !!}</p>
+                                        <div class="btn-bar">
+                                            <a href="{{ URL::to('/blog-detail/' . $blog->id) }}" class="px-btn-arrow">
+                                                <span>Xem thêm</span>
+                                                <i class="arrow"></i>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
                         @endforeach
                         <div class="col-12">
                             <ul class="pagination justify-content-center">
                                 <li class="page-item disabled">
-                                    <a class="page-link" href="#" tabindex="-1"><i class="fas fa-chevron-left"></i></a>
+                                    <a class="page-link" href="#" tabindex="-1"><i
+                                            class="fas fa-chevron-left"></i></a>
                                 </li>
                                 <li class="page-item"><a class="page-link" href="#">1</a></li>
                                 <li class="page-item active">
@@ -133,8 +136,8 @@
                 </div>
 
                 <div class="col-lg-4 m-15px-tb blog-aside">
-                   
-                    
+
+
 
                     <!-- Latest Post -->
                     <div class="widget widget-latest-post">
@@ -143,30 +146,31 @@
                         </div>
                         <div class="widget-body">
                             @foreach ($list_blog as $blog)
-                          
-                            <div class="latest-post-aside media">
-                                <div class="lpa-left media-body">
-                                    <div class="lpa-title">
-                                        <h5><a href="{{URL::to('/blog-detail/'.$blog->id)}}">{{$blog->title}}</a></h5>
+                                <div class="latest-post-aside media">
+                                    <div class="lpa-left media-body">
+                                        <div class="lpa-title">
+                                            <h5><a
+                                                    href="{{ URL::to('/blog-detail/' . $blog->id) }}">{{ $blog->title }}</a>
+                                            </h5>
+                                        </div>
+                                        <div class="lpa-meta">
+                                            <a class="name" href="{{ URL::to('/blog-detail/' . $blog->id) }}">
+                                                {{ $blog->author }}
+                                            </a>
+                                            <a class="date" href="{{ URL::to('/blog-detail/' . $blog->id) }}">
+                                                {{ $blog->create_at }}
+                                            </a>
+                                        </div>
                                     </div>
-                                    <div class="lpa-meta">
-                                        <a class="name" href="{{URL::to('/blog-detail/'.$blog->id)}}">
-                                            {{$blog->author}}
-                                        </a>
-                                        <a class="date" href="{{URL::to('/blog-detail/'.$blog->id)}}">
-                                            {{$blog->create_at}}
+                                    <div class="lpa-right">
+                                        <a href="{{ URL::to('/blog-detail/' . $blog->id) }}">
+                                            <img src="{{ asset('uploads/blogs/' . $blog->image) }}" title=""
+                                                alt="">
                                         </a>
                                     </div>
                                 </div>
-                                <div class="lpa-right">
-                                    <a href="{{URL::to('/blog-detail/'.$blog->id)}}">
-                                        <img src="{{asset('uploads/blogs/'.$blog->image)}}" title="" alt="">
-                                    </a>
-                                </div>
-                            </div>
-      
                             @endforeach
-                          
+
                         </div>
                     </div>
                     <!-- End Latest Post -->
