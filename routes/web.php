@@ -268,7 +268,7 @@ Route::prefix('/') -> name('home.') -> group(function () {
 
 /** Login */
 Route::prefix('/login') -> name('login')-> group(function () {
-    Route::get('/login-client', [LoginController::class, 'index']) -> name('.');
+    Route::get('/', [LoginController::class, 'index']) -> name('.');
     Route::post('/', [LoginController::class,'login']);
     
     Route::prefix('forget-password') -> group(function() {
@@ -280,10 +280,10 @@ Route::prefix('/login') -> name('login')-> group(function () {
     });
     Route::post('/change-password', [LoginController::class,'change_password']) -> name('.save_change_password'); 
 
-    // /** Login with social */
-    // Route::get('/social/policy', function () {
+    /** Login with social */
+    Route::get('/social/policy', function () {
 
-    // }); // 
+    }); // 
 
     // facebook
     Route::get('/facebook', [LoginController::class,'facebook']) -> name('.facebook');

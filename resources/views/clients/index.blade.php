@@ -72,7 +72,7 @@
 
                                                 </div>
                                                 <!-- /.product-info -->
-                                                <div class="cart clearfix animate-effect">
+                                                {{-- <div class="cart clearfix animate-effect">
                                                     <div class="action">
                                                         <ul class="list-unstyled">
                                                             <li class="add-cart-button btn-group">
@@ -92,7 +92,7 @@
                                                         </ul>
                                                     </div>
                                                     <!-- /.action -->
-                                                </div>
+                                                </div> --}}
                                                 <!-- /.cart -->
                                             </div>
                                             <!-- /.product -->
@@ -140,8 +140,7 @@
                                                                 alt="" class="hover-image">
                                                         </a>
                                                     </div>
-                                                    <!-- /.image -->
-
+                                                   
                                                     <div class="tag new"><span>new</span></div>
                                                 </div>
                                                 <!-- /.product-image -->
@@ -156,29 +155,7 @@
                                                     <!-- /.product-price -->
 
                                                 </div>
-                                                <!-- /.product-info -->
-                                                <div class="cart clearfix animate-effect">
-                                                    <div class="action">
-                                                        <ul class="list-unstyled">
-                                                            <li class="add-cart-button btn-group">
-                                                                <button data-toggle="tooltip" class="btn btn-primary icon"
-                                                                    type="button" title="Add Cart"> <i
-                                                                        class="fa fa-shopping-cart"></i> </button>
-                                                                <button class="btn btn-primary cart-btn"
-                                                                    type="button">Add to cart</button>
-                                                            </li>
-                                                            <li class="add-cart-button btn-group">
-                                                                <button data-toggle="tooltip" class="btn btn-primary icon"
-                                                                    type="button" title="Add Cart"> <i
-                                                                        class="icon fa fa-heart"></i></button>
-                                                                <button class="btn btn-primary cart-btn"
-                                                                    type="button">Add to cart</button>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <!-- /.action -->
-                                                </div>
-                                                <!-- /.cart -->
+                                                
                                             </div>
                                             <!-- /.product -->
 

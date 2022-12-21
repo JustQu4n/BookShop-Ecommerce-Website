@@ -1,13 +1,13 @@
 <div class="red-slide">
     <span class="get">
-        Get -30% purchase
+       Giảm 30% khi 
     </span>
     <span id="black">
-        on order over $299.00
+       thanh toán đơn hàng trên 990vnđ
     </span>
 
     <button class="more" src="Shop.html">
-        MORE INFO
+       Xem thêm
     </button>
 </div>
 
