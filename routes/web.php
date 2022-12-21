@@ -295,7 +295,7 @@ Route::prefix('/login') -> name('login')-> group(function () {
     
 });
 /** Register */
-Route::prefix('/register') -> name('register.') -> group(function () {
+Route::prefix('/register') -> name('register') -> group(function () {
     Route::get('/', [LoginController::class, 'registerView']) -> name('index');
     Route::post('/post', [LoginController::class, 'register']) -> name('post');
     Route::get('/active_account/{id}/{token}', [LoginController::class, 'active_account']) -> name('.activate_account');

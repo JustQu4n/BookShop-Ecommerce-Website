@@ -20,7 +20,7 @@
 
     <div class="overlay" class="register">
 
-        <form style="width: 565px; margin: 0 auto;" class="register" action="{{ route('register.post') }}"
+        <form style="width: 565px; margin: 0 auto;" class="register" action="{{ route('registerpost') }}"
             method="POST">
             @csrf
             <div class="con">
