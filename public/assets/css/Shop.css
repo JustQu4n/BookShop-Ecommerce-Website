@@ -578,25 +578,28 @@ q {
 .more{
         display: none;
         position: absolute;
-        background-color: #f1f1f1;
+        /* background-color: #f1f1f1; */
         min-width: 170px;
         box-shadow: 0px 8px 16px 0px rgba(75, 74, 74, 0.2);
         z-index: 1;
         border-radius: 7px;
         color:#beb4b4;
+        bottom: 20px;
 }
+
 .more a {
     text-decoration: none;
     color: red;
 
 }
+.more i{
+    color: white;
+}
 .more button {
-    background-color: none; 
-    border: none;
-    color: rgb(0, 0, 0); 
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .more button:hover {
-    color: rgb(0, 0, 0);
+    /* color: rgb(0, 0, 0); */
 
 }
 .more button i {
@@ -628,6 +631,7 @@ q {
 .author-drama {
     font-size: 13px;
   font-family: "News Gothic No 2", sans-serif;
+  text-align: center;
 
 }
 .author-drama p {
@@ -989,3 +993,20 @@ button.info-more {
         transition: all 0.5s;
     }
 }
+.button .btn {
+    display: inline-block;
+    text-transform: capitalize;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 13px 30px;
+    background-color: #0167F3;
+    color: #fff;
+    border: none;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+    border-radius: 3px;
+    position: relative;
+    z-index: 1;
+    margin-right: 7px;
+    overflow: hidden;
+  }

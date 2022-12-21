@@ -13,7 +13,7 @@ class HomeController extends Controller
     //
 
     public function index(Request $request) {
-
+        $list_blog = Blog::getListBlog();
         if(session('login_success')) {
             $email = $request-> session()-> get('user_mail'); 
             $password = $request-> session() -> get('user_password'); 
@@ -22,13 +22,13 @@ class HomeController extends Controller
         $arrivebook =Book::getArriveBook();
         $books_bestSell = OrderDetail::getBestSelling();
         $category = Book::getNameCategory();
-            return view('clients.index', compact('user','books_rating','arrivebook','category')); 
+            return view('clients.index', compact('user','books_rating','arrivebook','category','list_blog')); 
         }
         $books_rating = Book::getBookRating();
         $arrivebook =Book::getArriveBook();
         $books_bestSell = OrderDetail::getBestSelling();
         $category = Book::getNameCategory();
-        $list_blog = Blog::getListBlog();
+   
         return view('clients.index',compact('books_rating','arrivebook','category','list_blog')); 
     }
 

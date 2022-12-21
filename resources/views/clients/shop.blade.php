@@ -28,6 +28,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="{{asset('assets/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="{{asset('assets/js/shop.js')}}"></script>
@@ -150,6 +151,7 @@
                             <div class="thumbnail-drama">
                                 <a href="{{route('detail', ['id' => $book->id])}}"><img src="{{asset("uploads/books/$book->image")}}" alt=""></a>
                             </div>
+                          
                             <div class="more">
                                 <ul type="none">
                                     <li>
@@ -159,10 +161,10 @@
                                             <input type="hidden" name="cart_image" class="cart_book_image_{{$book->id}}" value="{{$book->image}}">
                                             <input type="hidden" name="cart_price" class="cart_book_price_{{$book->id}}" value="{{$book->price}}">
                                             <input type="hidden" name="cart_qty" class="cart_book_qty_{{$book->id}}" value="1">
-                                            <button class="add-cart"  data-id="{{$book->id}}"><i class="fa fa-shopping-cart" aria-hidden="true"></i> Thêm vào giỏ</button>  
+                                            <button class="add-cart btn btn-primary"  data-id="{{$book->id}}"><i class="fa-solid fa-cart-shopping" style="color: white"></i> Thêm vào giỏ</button>  
                                         </form>
                                     </li>
-                                    <li><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i>Yêu thích</a> </li>
+                                   
                                 </ul>
                             </div>
                             </div>
