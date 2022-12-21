@@ -74,7 +74,7 @@
                 
                 <div class="forget-signup">
                     <button><a href="{{route('login.viewPass')}}" style="text-decoration: none;"> Quên mật khẩu</a></button>
-                    <div id="register"><a href="{{route('register')}}" style="text-decoration: none;">Đăng ký</a> </div>
+                    <div id="register"><a href="{{route('register.index')}}" style="text-decoration: none;">Đăng ký</a> </div>
                 </div>
             </div>
         </form> 
