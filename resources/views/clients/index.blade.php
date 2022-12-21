@@ -4,7 +4,7 @@
     <div class="body-content outer-top-vs" id="top-banner-and-menu">
         <div class="container">
             <div class="row slider-banner">
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 ">
                     <!-- ========================================== SECTION – HERO ========================================= -->
                     <div id="hero" class="">
                         <div id="owl-main" class="owl-carousel owl-inner-nav owl-ui-sm">
@@ -33,11 +33,14 @@
             </div>
 
             <div id="product-tabs-slider" class="scroll-tabs outer-top-vs">
-                <div class="more-info-tab clearfix ">
-                    <h3 class="new-product-title pull-left">XEM NHIỀU NHẤT</h3>
-
-                    <!-- /.nav-tabs -->
-                </div>
+               
+                 <div  style=" background-image: url(frontend/assets/images/line.jpg);">
+                    <div class="more-info-tab clearfix ">
+                        <h3 class="new-product-title ">XEM NHIỀU NHẤT</h3>
+    
+                        <!-- /.nav-tabs -->
+                    </div>
+                 </div>
                 <div class="tab-content outer-top-xs">
                     <div class="tab-pane in active" id="all">
                         <div class="product-slider">
@@ -51,49 +54,25 @@
                                                         <a href="{{ URL::to('product/' . $book->id) }}">
                                                             <img src="{{ asset('uploads/books/' . $book->image) }}"
                                                                 alt="">
-                                                            <img src="Images\book-home\ad66579fcd9679a5b5b980e88dd92ee1.jpg.webp"
-                                                                alt="" class="hover-image">
+                                                           
                                                         </a>
                                                     </div>
                                                     <!-- /.image -->
 
-                                                    <div class="tag new"><span>new</span></div>
+                                                    <div class="tag new"><span>Mới</span></div>
                                                 </div>
                                                 <!-- /.product-image -->
 
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="detail.html">{{ $book->name }}</a></h3>
+                                                <div class="product-info ">
+                                                    <h3 class="name" style=" font-family: Manrope, sans-serif;"><a href="detail.html">{{ $book->name }}</a></h3>
                                                     <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"> <span class="price">
-                                                            {{ number_format($book->price) }} </span> <span
-                                                            class="price-before-discount">$ 800</span> </div>
-                                                    <!-- /.product-price -->
+                                                    <div class="description" style="text-align: center;font-size:16px;color:rgb(39, 38, 38)">{{ $book->author }}</div>
+                                                    <div class="product-price"> 
+                                                       <p style="text-align: center;color:tomato; font-size:18px; font-weight:600;">{{number_format($book->price)}}VNĐ</p>
+                                                     </div>
 
                                                 </div>
-                                                <!-- /.product-info -->
-                                                {{-- <div class="cart clearfix animate-effect">
-                                                    <div class="action">
-                                                        <ul class="list-unstyled">
-                                                            <li class="add-cart-button btn-group">
-                                                                <button data-toggle="tooltip" class="btn btn-primary icon"
-                                                                    type="button" title="Add Cart"> <i
-                                                                        class="fa fa-shopping-cart"></i> </button>
-                                                                <button class="btn btn-primary cart-btn" type="button">Add
-                                                                    to cart</button>
-                                                            </li>
-                                                            <li class="add-cart-button btn-group">
-                                                                <button data-toggle="tooltip" class="btn btn-primary icon"
-                                                                    type="button" title="Add Cart"> <i
-                                                                        class="icon fa fa-heart"></i></button>
-                                                                <button class="btn btn-primary cart-btn" type="button">Add
-                                                                    to cart</button>
-                                                            </li>
-                                                        </ul>
-                                                    </div>
-                                                    <!-- /.action -->
-                                                </div> --}}
-                                                <!-- /.cart -->
+                                                
                                             </div>
                                             <!-- /.product -->
 
@@ -118,10 +97,11 @@
 
             <!-- ============================================== SCROLL TABS : END ============================================== -->
             <div id="product-tabs-slider" class="scroll-tabs outer-top-vs">
+                <div  style=" background-image: url(frontend/assets/images/line.jpg);">
                 <div class="more-info-tab clearfix ">
-                    <h3 class="new-product-title pull-left">SẢN PHẨM MỚI VỀ</h3>
+                    <h3 class="new-product-title ">SẢN PHẨM MỚI VỀ</h3>
 
-                    <!-- /.nav-tabs -->
+                </div>
                 </div>
                 <div class="tab-content outer-top-xs">
                     <div class="tab-pane in active" id="all">
@@ -141,18 +121,19 @@
                                                         </a>
                                                     </div>
 
-                                                    <div class="tag new"><span>new</span></div>
+                                                    <div class="tag new"><span>Mới</span></div>
                                                 </div>
                                                 <!-- /.product-image -->
 
-                                                <div class="product-info text-left">
-                                                    <h3 class="name"><a href="detail.html">{{ $arrive->name }}</a></h3>
+                                                <div class="product-info ">
+                                                    <h3 class="name"  style=" font-family: Manrope, sans-serif;"><a href="detail.html">{{ $arrive->name }}</a></h3>
                                                     <div class="rating rateit-small"></div>
-                                                    <div class="description"></div>
-                                                    <div class="product-price"> <span class="price">
-                                                            {{ number_format($arrive->price) }} </span> <span
-                                                            class="price-before-discount">$ 800</span> </div>
-                                                    <!-- /.product-price -->
+                                                    <div class="description" style="text-align: center;font-size:16px;color:rgb(39, 38, 38)">{{ $arrive->author }}</div>
+                                                    <div class="product-price"> 
+                                                        <span class="price" style="text-align: center;color:tomato;">
+                                                            <p style="text-align: center;color:tomato; font-size:18px; font-weight:600;">{{number_format($arrive->price)}}VNĐ</p>
+                                                         </span>  
+                                                     </div>
 
                                                 </div>
 
@@ -190,14 +171,14 @@
                 <div class="col-md-4 col-sm-4">
                     <div class="wide-banner cnt-strip">
                         <div class="image"> <img class="img-responsive"
-                                src="./Images/slider/bigsale_t11_resize_840x320.jpg" alt=""> </div>
+                                src="{{asset('uploads/blogs/Trang_Manga-Comic_Mainbanner_T10_Slide_840x320.jpg')}}" alt=""> </div>
                     </div>
                     <!-- /.wide-banner -->
                 </div>
 
                 <div class="col-md-4 col-sm-4">
                     <div class="wide-banner cnt-strip">
-                        <div class="image"> <img class="img-responsive" src="./Images/slider/FAHASA_potico_840x320.png"
+                        <div class="image"> <img class="img-responsive"  src="{{asset('uploads\blogs\FAHASA-ONT11_840x320.jpg')}}" 
                                 alt=""> </div>
                     </div>
                     <!-- /.wide-banner -->
@@ -207,7 +188,7 @@
                 <div class="col-md-4 col-sm-4">
                     <div class="wide-banner cnt-strip">
                         <div class="image"> <img class="img-responsive"
-                                src="./Images/slider/Trang_Manga-Comic_Mainbanner_T10_Slide_840x320.jpg" alt="">
+                            src="{{asset('uploads/blogs/Fahasaday_mainbanner_Slide_840x320.jpg')}}"  alt="">
                         </div>
                     </div>
                     <!-- /.wide-banner -->

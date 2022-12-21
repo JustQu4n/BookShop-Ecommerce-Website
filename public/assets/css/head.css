@@ -38,30 +38,45 @@
   .dropbtn::before {
 
   }
-  
+  .login-register{
+    position: absolute;
+    right: 0.5px;
+    padding-right: 40px;
+
+  }
+  .phone{
+    position: absolute;
+    right: 220px;
+  }
+
   .dropdown {
     position: relative;
     display: inline-block;
     transition: all 0.3s;
   }
-  
+ 
   .dropdown-content {
     display: none;
     position: absolute;
     background-color: #f9f9f9;
-    min-width: 160px;
-    top: 35px; 
+    border-radius:9px ;
+   width: 200px;
+    top: 35px;
+    right: 10px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 10;
     transition: all 0.3s;
   }
-  
+  .dropdown-content i{
+    color: black;
+  }
   .dropdown-content a {
     color: black;
     padding: 2px 2px;
     text-decoration: none;
     display: block;
     transition: all 0.3s;
+    font-family: Arial, Helvetica, sans-serif;
   }
   
   .dropdown-content a:hover {background-color: #f1f1f1}
@@ -282,4 +297,31 @@ li #phone-number {
 
 
     
+}
+
+.qty{
+    background-color: #ff5740;
+    width: 15px;
+    height: 15px;
+    border-radius:10px ;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    padding-bottom: 10px;
+    position: absolute;
+    right:10px;
+    padding-bottom: 19px;
+}
+.qty-2{
+    background-color: #ff5740;
+    width: 15px;
+    height: 15px;
+    border-radius:10px ;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+    padding-bottom: 10px;
+    position: absolute;
+    right:10px;
+    padding-bottom: 19px;
 }

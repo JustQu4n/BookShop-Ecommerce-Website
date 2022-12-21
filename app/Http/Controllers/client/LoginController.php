@@ -38,6 +38,7 @@ class LoginController extends Controller
             $request->session()->put('user_mail', $user->email);
             $request -> session() -> put('user_password', $user->password);
             $request ->session()->put('user_id', $user->id);
+            $request ->session()->put('user_name', $user->name);
 
             $checkCart = Cart::count();
             if($checkCart != 0) { // kiểm tra xem trước khi đăng nhập có thêm cái gì vào giỏ hàng hay không 

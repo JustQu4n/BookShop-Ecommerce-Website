@@ -12,13 +12,14 @@ class BlogController extends Controller
     //
 
     public function index(Request $request) {
+        $list_blog = Blog::getListBlog();
         if(session('login_success')) {
             $email = $request-> session()-> get('user_mail'); 
             $password = $request-> session() -> get('user_password'); 
             $user = User::authUser($email,  $password);
-            return view('clients.blog', compact('user')); 
+            return view('clients.blog', compact('user','list_blog')); 
         }
-        $list_blog = Blog::getListBlog();
+      
         return view('clients.blog', compact('list_blog')); 
     }
     public function blogDetail($id_blog){

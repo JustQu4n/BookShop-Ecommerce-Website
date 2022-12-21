@@ -139,21 +139,26 @@ class ShopController extends Controller
                     <div class="thumbnail-drama">'.
                     '<a href="'.route("detail", ["id" =>$book->id ]). '"><img src="'. asset("uploads/books/$book->image").'"alt=""></a>'
                     .'</div>
+                  
                     <div class="more">
-                        <ul type="none">
-                            <li>
-                                <form method="POST">
-                                    '.
-                                    '<input type="hidden" name="cart_name" class="cart_book_name_'.$book->id. '" value="'.$book->name.'">'
-                                    .'<input type="hidden" name="cart_image" class="cart_book_image_'.$book->id.'" value="'.$book->image.'">'
-                                    .'<input type="hidden" name="cart_price" class="cart_book_price_'.$book->id.'" value="'.$book->price.'">'
-                                    .'<input type="hidden" name="cart_qty" class="cart_book_qty_'.$book->id.'" value="1">'
-                                    .'<button class="add-cart"  data-id="'.$book->id.'"><i class="fa fa-shopping-cart" aria-hidden="true"></i>Thêm vào giỏ hàng</button>'  
-                                .'</form>
-                            </li>
-                            <li><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i>Yêu thích</a> </li>
-                        </ul>
-                    </div>
+                    <ul type="none">
+                        <li>
+                            <form method="POST">
+                               
+                                '.
+                                '<input type="hidden" name="cart_name" class="cart_book_name_'.$book->id. '" value="'.$book->name.'">'
+                                .'<input type="hidden" name="cart_image" class="cart_book_image_'.$book->id.'" value="'.$book->image.'">'
+                                .'<input type="hidden" name="cart_price" class="cart_book_price_'.$book->id.'" value="'.$book->price.'">'
+                                .'<input type="hidden" name="cart_qty" class="cart_book_qty_'.$book->id.'" value="1">
+                                <button class="add-cart btn btn-primary"
+                                    data-id="'.$book->id.'"><i
+                                        class="fa-solid fa-cart-shopping" style="color: white"></i>
+                                    Thêm vào giỏ</button>
+                            </form>
+                        </li>
+
+                    </ul>
+                </div>
                     </div>
                     <div class="title-drama">
                         <h6>'.$book->name.'</h6>

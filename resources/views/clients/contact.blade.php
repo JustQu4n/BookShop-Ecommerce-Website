@@ -50,6 +50,7 @@
             <a href="#" class="gen-a" style="color: red; ">Liên hệ </a>
             <a href="{{ route('event.') }}" class="gen-a">Sự kiện</a>
             <a id="cart" href="{{ route('cart.') }}"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+            <div class="qty-2">{{Cart::count()}}</div>
         </div>
 
         <div class="menu-bartemp" id="hide">

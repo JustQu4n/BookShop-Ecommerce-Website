@@ -70,6 +70,9 @@
     <div id="header">
         @include('layouts/head')
     </div>
+    <button class="scrollTop" onclick="topFunction()" id="myBtn" title="Go to top" style="display: inline-block;">
+        <i class="ti-arrow-up"></i>
+    </button>
     <div class="navigation" id="nav">
 
         <div class="logo">
@@ -94,6 +97,7 @@
             <a href="{{ route('contact.') }}" class="gen-a">Liên hệ </a>
             <a href="#" class="gen-a">Sự kiện</a>
             <a id="cart" href="{{ route('cart.') }}"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+            <div class="qty">{{Cart::count()}}</div>
         </div>
 
         {{-- <div class="menu-bartemp" id ="hide">

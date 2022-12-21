@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 /* This is header */
 #header {
 
@@ -14,7 +15,6 @@
 #header .login {
     height: 50px;
     display: flex;
-    background-color: rgb(246, 241, 241);
 
 
 }
@@ -533,6 +533,7 @@ q {
     box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
     border-radius: 10px;
     margin-left: 10px;
+    
 
 }
 
@@ -556,7 +557,7 @@ q {
     height: 249px;
     transition: all 0.5s;
     border-radius: 5 5px 5px 5px;
-    box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
+    /* box-shadow: 0 0 30px rgba(31, 45, 61, 0.125); */
 
 }
 
@@ -619,8 +620,10 @@ q {
 
 .title-drama {
     margin-top: 5px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 18px;
+    font-family: "Manrope", sans-serif;
+    font-weight: 700;
+    color: #081828;
+    width: 180px;
 }
 
 .title-drama h6 {
@@ -629,25 +632,29 @@ q {
 }
 
 .author-drama {
-    font-size: 13px;
-  font-family: "News Gothic No 2", sans-serif;
+    font-size: 15px;
+    font-family: "Manrope", sans-serif;
   text-align: center;
+  
 
 }
 .author-drama p {
     text-align: center;
+    color: rgb(66, 66, 66);
 }
+
 .price-drama h6 {
-    font-size: 19px;
+    font-size: 18px;
     color: #de3241;
     text-align: center;
+    font-family: "Manrope", sans-serif;
 }
 
 .star-drama {
     text-align: center;
 }
 .star-drama span {
-   font-size: 14px;
+   font-size: 11px;
 }
 
 .type-mystery {
@@ -875,19 +882,7 @@ button.info-more {
     padding: 10px;
     right: 50px;
 }
-#myBtn {
-    padding: 15px 15px;
-    background-color: black;
-    transition: all 0.5s ease;
-    position: absolute;
-    cursor: pointer;
-    position: fixed;
-    bottom: 40px;
-    right: 40px;
-    z-index: 99;
-    display: none;
-    font-size: 18px;
-}
+
 
 
 @media (max-width: 1024px) {

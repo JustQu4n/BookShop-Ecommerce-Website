@@ -56,6 +56,7 @@
             <a href="{{ route('contact.') }}" class="gen-a">Liên hệ</a>
             <a href="{{ route('home.') }}" class="gen-a">Sự kiện</a>
             <a id="cart" href="{{ route('cart.') }}"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+            <div class="qty">{{Cart::count()}}</div>
         </div>
 
         <div class="menu-bartemp" id="hide">
@@ -65,6 +66,7 @@
             <a href="{{ route('contact.') }}" class="gen-a">Liên hệ</a>
             <a href="{{ route('home.') }}" class="gen-a">Sự kiện</a>
             <a id="cart" href="{{ route('cart.') }}"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+           
         </div>
 
     </div>

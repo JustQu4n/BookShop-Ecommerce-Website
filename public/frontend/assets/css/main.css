@@ -30,6 +30,7 @@ Text Domain:  Marazzo
 /*===================================================================================*/
 /*  Body
 /*===================================================================================*/
+
 .inline {
   display: inline-block;
   vertical-align: top;
@@ -645,7 +646,12 @@ img[src="assets/images/blank.gif"] {
   margin-bottom: 35px;
 }
 
-.product-slider .products {margin-left:0px; margin-right:18px; padding-bottom:15px}
+.product-slider .products {
+  margin-left:0px; margin-right:18px; padding-bottom:15px;
+  border: 1px solid rgb(221, 218, 218);
+  box-shadow: 0 0 30px rgba(31, 45, 61, 0.125);
+  border-radius: 10px;
+}
 .product-slider .products .cart-btn {display:none}
 .category-product .products .cart-btn {display: none;}
 
@@ -1997,7 +2003,7 @@ header{
 #owl-main {
   text-align: center;
   cursor: default;
-  height: 520px;
+  /* height: 520px; */
 }
 #owl-main .owl-controls {
   display: inline-block;
@@ -2754,17 +2760,16 @@ font-family: FontAwesome;
   border-bottom: 1px solid #eaeaea;
   padding-bottom: 10px;
   padding: 20px 20px;
- background-color: #fcdab0;
   border-left: 5px solid red;
- border-top-left-radius: 10px;
- border-bottom-left-radius: 10px;
 }
 .scroll-tabs .more-info-tab .new-product-title {
   margin-bottom: 0px;
   margin-top: 0px;
-  font-size:24px;
+  font-size:28px;
   font-family: 'Barlow', sans-serif;
-  font-weight:600
+  font-weight:600;
+  text-align: center;
+
 }
 .scroll-tabs .nav-tab-line {
   border-bottom: none;
@@ -2805,20 +2810,21 @@ font-family: FontAwesome;
 }
 .product .product-info .name {
   font-size: 16px;
-  font-family:'Barlow', sans-serif;
-  font-weight:600
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight:600;
+  text-align: center;
 }
 .product .product-info .name a {
-  color: #555;
+  color: black;
 }
 .product .product-info .star-rating .color {
   color: #ffb400;
 }
 .product .product-info .product-price .price {
-  font-weight: 600;
+  /* font-weight: 600;
   font-size: 18px;
   line-height: 30px;
-  margin-right: 8px;
+  text-align: center; */
 }
 .product .product-info .product-price .price-before-discount {
   text-decoration: line-through;
@@ -2896,7 +2902,7 @@ font-family: FontAwesome;
   z-index: 100;
 }
 .tag.new {
-  background: #46aad7;
+  background: #ec3b0f;
 }
 .tag.hot {
   background: #ff7878;
@@ -7377,7 +7383,8 @@ li.dropdown.navbar-right.special-menu {
 .home-banner img {border-radius:5px}	
 
 .slider-banner{
- height: 450px;
+ display: flex;
+ justify-content: center;
 }
 .seemore{
   display: flex;
@@ -7456,4 +7463,31 @@ li.dropdown.navbar-right.special-menu {
 .bt-list-price {
   margin-left: 10px;
   margin-top: 10px;
+}
+
+#myBtn {
+  /* padding: 15px 15px; */
+  background-color: rgb(11, 195, 219);
+  transition: all 0.5s ease;
+  position: absolute;
+  cursor: pointer;
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  z-index: 99;
+  display: none;
+  font-size: 18px;
+  border-radius: 50px;
+  border: none;
+  height: 50px;
+  width: 50px;
+}
+#myBtn:hover {
+  background-color: #DE3241 ;
+  color: white; 
+  border: 2px solid black ;
+}
+
+#myBtn >i {
+  color: white;
 }
