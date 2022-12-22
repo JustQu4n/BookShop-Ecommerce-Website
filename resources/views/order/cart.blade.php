@@ -44,13 +44,15 @@
     <div class="navigation" id="nav">
 
         <div class="logo">
-            <a href="index.html"><img src="{{ asset('assets/images/logoes/logo3.png') }}" alt=""></a>
+            <a href="{{URL::to('/')}}"><img src="{{ asset('assets/images/logoes/logo3.png') }}" alt=""></a>
         </div>
+        <form action="{{ URL::to('/tim-kiem') }}" method="POST" autocomplete="off">
+            @csrf
         <div class="search">
-            <input type="text" placeholder="Find Your Book...">
+            <input type="text" placeholder="" name="keyword" id="keywords" value="{{ old('keyword') }}">
             <button><i class="fa fa-search" aria-hidden="true"></i></button>
-            <button id="menu-an"><i class="ti-menu"></i></button>
-        </div>
+        </form>
+        <button id="menu-an"><i class="ti-menu"></i></button>
         <div class=" menu-bar" style="display: flex ">
 
             <a id="test" href="{{ route('home.') }}" class="color-line">Trang chủ</a>
@@ -58,9 +60,8 @@
             <a href="{{ route('blog.') }}" class="gen-a">Blog</a>
             <a href="{{ route('contact.') }}" class="gen-a">Liên hệ </a>
             <a href="{{ route('event.') }}" class="gen-a">Sự kiện</a>
-            <a id="cart" href="{{ route('cart.') }}" style="color: red;"><i class="fa fa-shopping-bag"
-                    aria-hidden="true"></i></a>
-                    <div class="qty-2">{{Cart::count()}}</div>
+            <a id="cart" href="{{ route('cart.') }}"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+            <div class="qty-2">{{ Cart::count() }}</div>
         </div>
 
         <div class="menu-bartemp" id="hide">
@@ -69,8 +70,7 @@
             <a href="{{ route('blog.') }}" class="gen-a">BLOG</a>
             <a href="{{ route('contact.') }}" class="gen-a">Liên hệ </a>
             <a href="{{ route('event.') }}" class="gen-a">Sự kiện</a>
-            <a id="cart" href="{{ route('cart.') }}" style="color: red;"><i class="fa fa-shopping-bag"
-                    aria-hidden="true"></i></a>
+            <a id="cart" href="{{ route('cart.') }}"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
         </div>
     </div>
 @endsection
@@ -120,11 +120,13 @@
                         <div class="table-responsive">
                             <table class="table table-borderless table-shopping-cart">
                                 <thead class="text-muted">
-                                    <tr class="small text-uppercase">
-                                        <th scope="col">Sách</th>
-                                        <th scope="col" width="120">Số lượng</th>
-                                        <th scope="col" style="text-align: center; width: 170px; ">Giá</th>
-                                        <th scope="col" class="text-right d-none d-md-block" width="200"></th>
+                                    <tr style="font-size: 18px; color:gray; font-weight:normal">
+                                        <th scope="col">Ản</th>
+                                        <th scope="col">Tên sản phẩm</th>
+                                        <th scope="col">Số lượng</th>
+                                        <th scope="col" >Giá(VNĐ)</th>
+                                        <th scope="col" >Thành tiền</th>
+                                        <th scope="col" ></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -141,35 +143,41 @@
                                                                 
                                                                 $rowId = $book->rowId;
                                                             @endphp
-                                                            <img src="{{ asset("uploads/books/$img") }}" class="img-sm">
+                                                            <img src="{{ asset("uploads/books/$img") }}" class="img-sm" style="border-radius: 5px">
                                                         </div>
-                                                        <figcaption class="info"> <a href="#"
-                                                                class="title text-dark"
-                                                                data-abc="true">{{ $book->name }}</a>
-                                                        </figcaption>
+                                                      
                                                     </figure>
+                                                </td>
+                                                <td>
+                                                      <a href="" style="text-decoration: none; color:black"><h6>{{ $book->name }}</h6></a>
                                                 </td>
                                                 <td>
                                                     <input type="number" name="qty" id="" min="1"
                                                         value="{{ $book->qty }}"
-                                                        style="width: 70px;
+                                                        style="width: 40px;
                                     text-align: center;">
+                                                    <button data-original-title="Save to Wishlist" title=""
+                                                        href="" class="btn btn-light btn-sm" data-toggle="tooltip"
+                                                        data-abc="true" style="">
+                                                        <i> Cập nhật</i>
+                                                    </button>
                                                     <input type="hidden" name="rowId" value="{{ $rowId }}">
                                                     <input type="hidden" name="book_id" value="{{ $book->id }}">
-
+                                                </td>
                                                 <td>
-                                                    <div class="price-wrap"> <var
-                                                            class="price">{{ number_format($book->price * $book->qty) . ' ' . 'VNĐ' }}</var>
+                                                    <div class="price-wrap"> 
+                                                        {{ number_format($book->price ) . ' ' . 'VNĐ' }}
+                                                </div>
+                                                </td>
+                                                <td>
+                                                    <div class="price-wrap"> 
+                                                        {{ number_format($book->price * $book->qty) . ' ' . 'VNĐ' }}
                                                     </div>
                                                 </td>
                                                 <td class="text-right d-none d-md-block" style="margin-left: 50px;">
-                                                    <button data-original-title="Save to Wishlist" title=""
-                                                        href="" class="btn btn-light" data-toggle="tooltip"
-                                                        data-abc="true">
-                                                        <i> Update</i>
-                                                    </button>
+
                                                     <a href="{{ route('cart.remove', ['id' => $rowId, 'book_id' => $book->id]) }}"
-                                                        class="btn btn-light btn-round" data-abc="true">Remove</a>
+                                                        class="btn btn-danger " data-abc="true">Xoá</a>
                                                 </td>
                                             </tr>
                                         </form>
@@ -208,18 +216,21 @@
                             @csrf
                             <div class="card-body">
                                 <dl class="dlist-align">
-                                    <dt>Tông tiền:</dt>
-                                    <dd class="text-right ml-3"> {{ $total . ' VNĐ' }}</dd>
+                                    <dt>Tổng:</dt>
+                                    <dd class="text-right " style="padding-left: 10px"> {{ $total . ' VNĐ' }}</dd>
                                     <input type="hidden" name="total" value="{{ $total }}">
                                 </dl>
                                 <dl class="dlist-align">
                                     <dt>Giảm giá:</dt>
-                                    <dd class="text-right text-danger ml-3">-{{ $discount . ' VNĐ' }} </dd>
+                                    <dd class="text-right text-danger" style="padding-left: 10px"> {{ $discount . ' VNĐ' }} </dd>
                                     <input type="hidden" name="price_dicount" value="{{ $discount }}">
                                 </dl>
                                 <dl class="dlist-align">
-                                    <dt>Tổng:</dt>
-                                    <dd class="text-right text-dark b ml-3"><strong>{{ $totalPrice . ' VNĐ' }}</strong>
+                                    <dt>Tổng tiền:</dt>
+                                    <dd class="text-right "  style="font-size: 19px;padding-left:20px; padding-bottom:10px">
+                                        <strong>
+                                            {{ $totalPrice . ' VNĐ' }}
+                                        </strong>
                                     </dd>
                                     <input type="hidden" name="price_pay" value="{{ $totalPrice }}">
                                 </dl>
@@ -231,8 +242,8 @@
                 </aside>
             </div>
         @else
-            <div class="alert" style="text-align: center; font-size: 40px; font-weight: 500;">
-                Giỏ hàng rỗng
+            <div class="alert" style="text-align: center; font-size: 20px; font-weight: 100;">
+                Giỏ hàng rỗng vui lòng thêm sản phẩm vào giỏ hàng
             </div>
         @endif
 

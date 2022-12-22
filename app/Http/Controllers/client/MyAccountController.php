@@ -23,6 +23,7 @@ class MyAccountController extends Controller
             $data['user_name'] = $user-> name ;
             $data['phone'] = $user->phone; 
             $data['email'] = $user->email;
+            $data['address'] = $user->address;
 
         } else {
             // account social

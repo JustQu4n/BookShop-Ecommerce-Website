@@ -7390,6 +7390,7 @@ li.dropdown.navbar-right.special-menu {
   display: flex;
   justify-content: center;
   padding-bottom: 20px;
+  margin-top: 20px;
 }
 .button-seemore{
   display: flex;

@@ -26,6 +26,7 @@ use App\Http\Controllers\client\MyAccountController;
 
 
 use App\Http\Controllers\MailController;
+use App\Http\Controllers\SliderContoller;
 use App\Http\Controllers\TestController;
 
 
@@ -378,4 +379,9 @@ Route::post('/login-auth', [AuthenController::class, 'login_authentication']);
 Route::get('/logout-auth', [AuthenController::class, 'logout_auth']);
 
 Route::post('/tim-kiem', [HomeController::class, 'search']);
-Route::post('/autocomplete-ajax', [HomeController::class, 'autocomplete_ajax']);
+// Route::post('/autocomplete-ajax', [HomeController::class, 'autocomplete_ajax']);
+Route::get('/manage-slider', [SliderContoller::class, 'manage_slider']);
+Route::post('/save-slider', [SliderContoller::class, 'save_slider']);
+Route::get('/unactive-slide/{slide_id}',[SliderContoller::class,'unactive_slide']);
+Route::get('/active-slide/{slide_id}',[SliderContoller::class,'active_slide']);
+Route::get('/delete-slider/{slide_id}',[SliderContoller::class,'delete_slider']);

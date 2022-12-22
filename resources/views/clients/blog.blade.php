@@ -45,11 +45,13 @@
         <div class="logo">
             <a href="{{ route('home.') }}"><img src="{{ asset('assets/images/logoes/logo3.png') }}" alt=""></a>
         </div>
+        <form action="{{ URL::to('/tim-kiem') }}" method="POST" autocomplete="off">
+            @csrf
         <div class="search">
-            <input type="text" placeholder="Find Your Book...">
+            <input type="text" placeholder="" name="keyword" id="keywords" value="{{ old('keyword') }}">
             <button><i class="fa fa-search" aria-hidden="true"></i></button>
-            <button id="menu-an"><i class="ti-menu"></i></button>
-        </div>
+        </form>
+        <button id="menu-an"><i class="ti-menu"></i></button>
         <div class=" menu-bar" style="display: flex ">
 
             <a id="test" href="{{ route('home.') }}" class="color-line">Trang chủ</a>

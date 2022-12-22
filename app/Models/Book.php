@@ -304,4 +304,8 @@ class Book extends Model
     $category = DB::table('category')->get();
     return $category;
    }
+   static function searchcomplete($query){
+    $search = DB::table('book')->where('status',1)->where('name','LIKE','%'.$query.'%')->orWhere('description','LIKE','%'.$query.'%')->orWhere('author','LIKE','%'.$query.'%')->orWhere('publisher','LIKE','%'.$query.'%')->get();
+    return $search;
+   }
 }

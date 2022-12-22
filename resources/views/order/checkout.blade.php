@@ -84,7 +84,7 @@
             <div class="item">
                 <p>Chọn tỉnh thành phố</p>
                 <select name="city" id="city" class="choose">
-                    <option value="">-- Chọn tỉnh/thành phố --</option>
+                    <option value="">Chọn tỉnh/thành phố </option>
                     @foreach ($list_cities as $city)
                         <option value="{{ $city->city_id }}">{{ $city->city_name }}</option>
                     @endforeach
@@ -98,7 +98,7 @@
             <div class="item">
                 <p>Chọn quận/huyện</p>
                 <select name="province" id="province" class="choose">
-                    <option value="">-- Chọn quận/huyện --</option>
+                    <option value=""> Chọn quận/huyện </option>
                 </select>
                 @error('province')
                     <p style="color:red; ">{{ $message }}</p>
@@ -108,7 +108,7 @@
             <div class="item">
                 <p>Chọn xã/phường</p>
                 <select name="wards" id="wards">
-                    <option value="">-- Chọn xã/phường -- </option>
+                    <option value=""> Chọn xã/phường </option>
                 </select>
                 @error('wards')
                     <p style="color:red; ">{{ $message }}</p>

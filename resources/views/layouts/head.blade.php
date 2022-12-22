@@ -13,10 +13,10 @@
                 <div class="dropdown">
                    <p style="font-size:17px;font-weight:500;font-family:Arial, Helvetica, sans-serif"> {{Session::get('user_name')}} <i class="fa-solid fa-circle-user" style=" font-size: 25px;"></i></p>
                     <div class="dropdown-content">
-                        <a href="{{ route('myAccount.') }}"><i class="fa-solid fa-circle-user"></i> Tài khoản của tôi</a>
+                        <a href="{{ route('myAccount.') }}"><i class="fa-solid fa-circle-user" style="padding-right: 7px"></i> Tài khoản của tôi</a>
                        
-                        <a href="{{ route('myAccount.order') }}"><i class="fa-solid fa-box"></i>  Đơn mua</a>
-                         <a href="{{ route('logout') }}"><i class="fa-solid fa-right-from-bracket"></i>  Đăng xuất</a>
+                        <a href="{{ route('myAccount.order') }}"><i class="fa-solid fa-box"  style="padding-right: 7px"></i>  Đơn mua</a>
+                         <a href="{{ route('logout') }}"><i class="fa-solid fa-right-from-bracket"  style="padding-right: 7px"></i>  Đăng xuất</a>
                     </div>
                 </div>
             </li>

@@ -8,23 +8,12 @@
                     <!-- ========================================== SECTION – HERO ========================================= -->
                     <div id="hero" class="">
                         <div id="owl-main" class="owl-carousel owl-inner-nav owl-ui-sm">
-
+                           @foreach ($slider as $sld)
                             <div class="item">
-                                <img src="{{ asset('frontend\assets\images\banner\Black_friday_Cyber_monday_mainbanner_Slide_840x320.jpg') }}"
-                                    alt="" width="100%" height="100%">
+                                <img src="{{ asset('uploads/sliderImage/'.$sld->image) }}"
+                                    alt="" width="100%" height="90%">
                             </div>
-                            <!-- /.item -->
-                            <div class="item">
-                                <img src="{{ asset('frontend\assets\images\banner\FAHASA-ONT11_840x320.jpg') }}"
-                                    alt="" width="100%" height="100%">
-                            </div>
-                            <!-- /.item -->
-                            <div class="item"">
-                                <img src="{{ asset('frontend\assets\images\banner\Trang_Manga-Comic_Mainbanner_T10_Slide_840x320.jpg') }}"
-                                    alt="" width="100%" height="100%">
-                            </div>
-                            <!-- /.item -->
-
+                            @endforeach
                         </div>
                         <!-- /.owl-carousel -->
                     </div>
@@ -87,7 +76,7 @@
                     </div>
                     <!-- /.tab-pane -->
                     <div class="seemore">
-                        <div class="button-seemore"><a href="">XEM THÊM</a></div>
+                        <div class="button-seemore"><a href="{{URL::to('shop')}}">XEM THÊM</a></div>
                     </div>
                 </div>
                 <!-- /.tab-content -->
@@ -116,8 +105,7 @@
                                                         <a href="{{ URL::to('product/' . $arrive->id) }}">
                                                             <img src="{{ asset('uploads/books/' . $arrive->image) }}"
                                                                 alt="">
-                                                            <img src="Images\book-home\ad66579fcd9679a5b5b980e88dd92ee1.jpg.webp"
-                                                                alt="" class="hover-image">
+                                                           
                                                         </a>
                                                     </div>
 
@@ -160,7 +148,7 @@
 
 
                 <div class="seemore">
-                    <div class="button-seemore"><a href="">XEM THÊM</a></div>
+                    <div class="button-seemore"><a href="{{URL::to('shop')}}">XEM THÊM</a></div>
                 </div>
             </div>
             <!-- /.tab-content -->

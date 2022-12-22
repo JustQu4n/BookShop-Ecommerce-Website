@@ -33,7 +33,10 @@
                     <td class="text-left">{{$data['phone']}}</td>
                 </tr>
                 @endif
-                
+                <tr>
+                    <td class="text-right">Địa chỉ</td>
+                    <td class="text-left">{{$data['address']}}</td>
+                </tr>
             </table>
 
             <input type="submit" value="Cập nhật" class="submit">

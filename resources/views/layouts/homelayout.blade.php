@@ -79,14 +79,15 @@
             <a href="{{ route('home.') }}"><img src="{{ asset('assets/images/logoes/logo3.png') }}"
                     alt=""></a>
         </div>
+        <form action="{{ URL::to('/tim-kiem') }}" method="POST" autocomplete="off">
+            @csrf
         <div class="search">
-            <form action="{{ URL::to('/tim-kiem') }}" method="POST" autocomplete="off">
-                @csrf
                 <input type="text" placeholder="" name="keyword" id="keywords" value="{{ old('keyword') }}">
-            </form>
+            
             <button><i class="fa fa-search" aria-hidden="true"></i></button>
-            <button id="menu-an"><i class="ti-menu"></i></button>
-            <div id="search_ajax"></div>
+           
+        </form>
+        <button id="menu-an"><i class="ti-menu"></i></button>
         </div>
 
         <div class=" menu-bar" style="display: flex ">
@@ -113,7 +114,8 @@
 
     @yield('content')
 
-    <script src="{{ asset('frontend/assets/js/jquery-1.11.1.min.js') }}"></script>
+    {{-- <script src="{{ asset('frontend/assets/js/jquery-1.11.1.min.js') }}"></script> --}}
+    <script src="{{ asset('frontend/assets/js/jquery1.9.1.min.js') }}"></script>
     <script src="{{ asset('frontend/assets/js/bootstrap.min.js') }}"></script>
     <script src="{{ asset('frontend/assets/js/bootstrap-hover-dropdown.min.js') }}"></script>
     <script src="{{ asset('frontend/assets/js/owl.carousel.min.js') }}"></script>
@@ -144,6 +146,7 @@
                 success: function(data) {
                     $('#search_ajax').fadeIn();
                     $('#search_ajax').html(data);
+                    console.log(data);
                 }
             });
 
@@ -155,6 +158,40 @@
         $('#keywords').val($(this).text());
         $('#search_ajax').fadeOut();
     });
+</script>
+
+
+<script>
+    var mybutton = document.getElementById("nav");
+    window.onscroll = function() {
+        navfixed()
+    };
+
+    // When the user scrolls down 20px from the top of the document, show the button
+
+
+    function navfixed() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+
+            mybutton.style.position = "fixed";
+        } else {
+            mybutton.style.position = "sticky";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+</script>
+
+<script>
+    function openNav() {
+        var temp = document.getElementById("hide")
+
+        temp.style.display = "inline-block";
+    }
 </script>
 
 </html>

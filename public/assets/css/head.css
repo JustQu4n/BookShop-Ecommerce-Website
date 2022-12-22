@@ -46,7 +46,7 @@
   }
   .phone{
     position: absolute;
-    right: 220px;
+    right: 250px;
   }
 
   .dropdown {
@@ -165,8 +165,8 @@ li #phone-number {
 
 .menu-bar {
    position: relative;
-   top: 30%;
-   left: 0%;
+   top: 35%;
+   left: 3%;
 }
 
 .menu-bar a {
@@ -175,7 +175,7 @@ li #phone-number {
     /* font-family: 'Titillium Web', sans-serif; */
     font-family: 'Muli', Arial, sans-serif;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 17px;
     font-weight: bold;
     text-decoration: none;
     margin-left: 11px;
@@ -190,8 +190,8 @@ li #phone-number {
     margin-left: 30px;
 }
 .search input {
-    width: 350px;
-    height: 35px;
+    width: 370px;
+    height: 39px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     border: 1px solid #bcbcc0;
@@ -204,7 +204,7 @@ li #phone-number {
 }
 .search button {
     width: 60px;
-    height: 35px;
+    height: 39px;
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     border: 1px solid #bcbcc0;

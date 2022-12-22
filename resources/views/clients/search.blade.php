@@ -61,7 +61,7 @@
             <a href="{{ route('contact.') }}" class="gen-a">Liên hệ</a>
             <a href="{{ route('home.') }}" class="gen-a">Sự kiện</a>
             <a id="cart" href="{{ route('cart.') }}"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
-            <div class="qty">{{Cart::count()}}</div>
+           
         </div>
 
         <div class="menu-bartemp" id="hide">
@@ -131,7 +131,7 @@
             </div>
             <div class="listbook-container">
                 <div id="name_category">
-                    <h5 style="font-family: 'Varela Round', sans-serif;padding-top:5px">{{ $name }}</h5>
+                    <h5 style="font-family: 'Varela Round', sans-serif;padding-top:5px"><span style="font-size: 13px">Từ khoá tìm kiếm:</span> {{ $query }}</h5>
                 </div>
                 <div class="browse-tags pull-right hidden-xs">
                     <form>
@@ -155,7 +155,7 @@
                 <div class="tabcontent" id="page1">
                     <div class="type-drama" id="list_books">
 
-                        @foreach ($list_books as $book)
+                        @foreach ($product as $book)
                             <div class="my-book ">
                                 <div class="dropdown">
                                     <div class="thumbnail-drama">
@@ -210,7 +210,7 @@
 
                     </div>
                     <div class="d-flex justify-content-center">
-                        {!! $list_books->links() !!}
+                        {{-- {!! $product->links() !!} --}}
                     </div>
 
                 </div>

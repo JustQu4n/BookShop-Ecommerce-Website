@@ -486,6 +486,15 @@
                                 <li><a href="{{ route('order.') }}">Danh sách đơn hàng </a></li>
                             </ul>
                         </li>
+                        <li class="sub-menu">
+                            <a href="javascript:;">
+                                <i class="fa fa-book"></i>
+                                <span>Quản lý slider </span>
+                            </a>
+                            <ul class="sub">
+                                <li><a href="{{ URL::to('/manage-slider') }}">Quản lý slider </a></li>
+                            </ul>
+                        </li>
 						<li class="sub-menu">
                             <a href="{{ route('list_user') }}">
                                 <i class="fa fa-book"></i>

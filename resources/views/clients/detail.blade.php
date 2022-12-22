@@ -49,11 +49,13 @@
         <div class="logo">
             <a href="{{ route('home.') }}"><img src="{{ asset('assets/images/logoes/logo3.png') }}" alt=""></a>
         </div>
+        <form action="{{ URL::to('/tim-kiem') }}" method="POST" autocomplete="off">
+            @csrf
         <div class="search">
-            <input type="text" placeholder="Find Your Book...">
+            <input type="text" placeholder="" name="keyword" id="keywords" value="{{ old('keyword') }}">
             <button><i class="fa fa-search" aria-hidden="true"></i></button>
-            <button id="menu-an"><i class="ti-menu"></i></button>
-        </div>
+        </form>
+        <button id="menu-an"><i class="ti-menu"></i></button>
         <div class=" menu-bar" style="display: flex ">
 
             <a id="test" href="{{ route('home.') }}" class="color-line">Trang chủ</a>
@@ -62,6 +64,7 @@
             <a href="{{ route('contact.') }}" class="gen-a">Liên hệ </a>
             <a href="{{ route('event.') }}" class="gen-a">Sự kiện</a>
             <a id="cart" href="{{ route('cart.') }}"><i class="fa fa-shopping-bag" aria-hidden="true"></i></a>
+            <div class="qty">{{Cart::count()}}</div>
         </div>
 
         <div class="menu-bartemp" id="hide">
@@ -124,11 +127,7 @@
                         <span>SALE!</span>
                     </div>  --}}
                         <div class="title1">
-                            <h1>{{ $book->name }}</h1>
-                        </div>
-                        <div class="author">
-                            <span>Tác giả:</span>
-                            <span>{{ $book->author }}</span>
+                            <p>{{ $book->name }}</p>
                         </div>
                         <div class="star">
                             <span class="fa fa-star checked"></span>
@@ -137,9 +136,32 @@
                             <span class="fa fa-star"></span>
                             <span class="fa fa-star"></span>
                         </div>
+                        <div class="author">
+                            <span>Tác giả:</span>
+                            <span>{{ $book->author }}</span>
+                        </div>
+                       
+                        <div class="publisher">
+                            <table>
+                                <tr>
+                                    <td>Nhà xuất bản:</td>
+                                    <td>{{ $book->publisher }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Năm xuất bản:</td>
+                                    <td>{{ $book->year }}</td>
+                                </tr>
+                                <tr>
+                                    <td>Tổng số trang:</td>
+                                    <td>{{ $book->total_page }}</td>
+                                </tr>
+
+                            </table>
+                        </div>
                         <div class="price">
                             <p>{{ number_format($book->price) . ' ' . 'VNĐ' }}</p>
                         </div>
+                        
                         <div class="qty-buy">
                             <form id="myForm" action="{{ route('checkout.') }}" style="min-width: 500px;"
                                 method="POST">
@@ -152,7 +174,7 @@
                                     value="{{ $book->price }}">
                                 <input type="hidden" name="book_id" value="{{ $book->id }}">
                                 <input type="hidden" name="buy_now" value="buy_now">
-                                <div class="qty" style="display: inline-block;">
+                                <div class="quantity" style="display: inline-block;">
                                     <input type="number" min="1" value="1" inputmode="numeric"
                                         autocomplete="off" name="cart_qty" class="cart_book_qty_{{ $book->id }}">
                                 </div>
@@ -161,7 +183,7 @@
                                 </div>
                                 <div class="cart" style="margin-left: 20px; display: inline-block; ">
                                     <button name="btn" value="cart" class="add-cart"
-                                        data-id="{{ $book->id }}">Thêm vào giỏ hàng</button>
+                                        data-id="{{ $book->id }}"><i class="fa-solid fa-cart-shopping"></i>Thêm vào giỏ hàng</button>
                                 </div>
 
                             </form>
@@ -179,23 +201,7 @@
                                 data-share="false"></div>
 
                         </div>
-                        <div class="publisher">
-                            <table>
-                                <tr>
-                                    <td>Nhà xuất bản:</td>
-                                    <th>{{ $book->publisher }}</th>
-                                </tr>
-                                <tr>
-                                    <td>Năm xuất bản:</td>
-                                    <th>{{ $book->year }}</th>
-                                </tr>
-                                <tr>
-                                    <td>Tổng số trang:</td>
-                                    <th>{{ $book->total_page }}</th>
-                                </tr>
-
-                            </table>
-                        </div>
+                       
                     </div>
                 </div>
             </div>
@@ -210,7 +216,7 @@
                     </div>
                 </div>
                 <div class="page-description">
-                    <div id="mota" class="tabcontent active" style="text-align: left! important;">
+                    <div id="mota" class="tabcontent active" style="text-align: left! important;    font-family: Manrope, sans-serif;">
                         {!! $book->content !!}
                     </div>
 
@@ -237,32 +243,34 @@
             </script>
             <div class="relate-book">
                 <div class="related">
-                    <h2>Sản phẩm liên quan</h2>
+                    <p>Sản phẩm liên quan</p>
                     <hr>
                 </div>
                 <div class="icon-relate">
                     @foreach ($relateBook as $book)
                         <div class="book-relate">
-                            <div class="thumbnail-relate">
+                            <div class="thumbnail-relate" >
                                 <a href="{{ route('detail', ['id' => $book->id]) }}">
                                     <img src="{{ asset("uploads/books/$book->image") }}" alt="">
                                 </a>
                             </div>
-                            <div class="title-relate">
-                                <h6>{{ $book->name }}</h6>
-                            </div>
-                            <div class="author-relate">
-                                <p>{{ $book->author }}</p>
-                            </div>
-                            <div class="star-relate">
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star checked"></span>
-                                <span class="fa fa-star"></span>
-                                <span class="fa fa-star"></span>
-                            </div>
-                            <div class="price-relate">
-                                <h6>{{ number_format($book->price) . ' ' . 'VNĐ' }}</h6>
+                            <div style="background-color:whitesmoke;border-radius: 0 0 10px 10px">
+                                <div class="title-relate">
+                                    <h6>{{ $book->name }}</h6>
+                                </div>
+                                <div class="author-relate">
+                                    <p>{{ $book->author }}</p>
+                                </div>
+                                <div class="star-relate">
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <span class="fa fa-star"></span>
+                                </div>
+                                <div class="price-relate">
+                                    <h6>{{ number_format($book->price) . ' ' . 'VNĐ' }}</h6>
+                                </div>
                             </div>
                         </div>
                     @endforeach
