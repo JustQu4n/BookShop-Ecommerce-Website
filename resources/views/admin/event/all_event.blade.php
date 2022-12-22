@@ -26,7 +26,7 @@
                         @endphp
                     @endif
                 </div>
-                <div class="col-sm-5 m-b-xs">
+                {{--  <div class="col-sm-5 m-b-xs">
                     <select class="input-sm form-control w-sm inline v-middle">
                         <option value="0">Bulk action</option>
                         <option value="1">Delete selected</option>
@@ -36,7 +36,7 @@
                     <button class="btn btn-sm btn-default">Apply</button>
                 </div>
                 <div class="col-sm-4">
-                </div>
+                </div>  --}}
                 <div class="col-sm-3">
                     <div class="input-group">
                         <input type="text" class="input-sm form-control" placeholder="Search">
